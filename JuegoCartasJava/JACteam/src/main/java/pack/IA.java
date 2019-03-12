@@ -14,12 +14,18 @@ public class IA extends Jugador{
 		
 		random = new Random();
 	}
+	/**
+	 * @return la única instancia de la IA, si no existe la crea.
+	 */
 	public static IA getIA() {
 		if(mIA == null) {
 			mIA= new IA(Color.VERDE);
 		}
 		return mIA;
 	}
+	/**
+	 * Ejecuta el turno de la IA (juega una carta aleatoria).
+	 */
 	public void ejecutarTurno(){
 		jugarCarta(random.nextInt(mano.getSize()));
 		setChanged();

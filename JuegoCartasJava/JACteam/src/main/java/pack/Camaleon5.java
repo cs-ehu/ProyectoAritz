@@ -9,6 +9,14 @@ public class Camaleon5 implements Animalada{
 		random = new Random();
 		carta=pCarta;
 	}
+	/**
+	 * El camaleón realiza la animalada de una de las especies que haya en la
+cola (aleatoriamente). Para efectuar dicha animalada (y solo en ese caso), el camaleón adopta
+también la fuerza de la especie imitada. Pero en cuanto se llevan a cabo las
+animaladas recurrentes (incluso en el mismo turno), el camaleón vuelve a ser un
+camaleón con una fuerza de 5.
+	 */
+	@Override
 	public void realizarAnimalada() {
 		int i;
 		Animalada anim = null;

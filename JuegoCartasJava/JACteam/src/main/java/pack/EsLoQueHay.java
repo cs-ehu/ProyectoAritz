@@ -12,7 +12,9 @@ public class EsLoQueHay extends Observable{
 		// TODO - implement EsLoQueHay.EsLoQueHay
 		listaCartas = new LinkedList<Carta>();
 	}
-
+	/**
+	 * @return la única instancia de Es Lo Que Hay, si no existe la crea.
+	 */
 	public static EsLoQueHay getEsLoQueHay() {
 		// TODO - implement EsLoQueHay.getEsLoQueHay
 		if(mEsLoQueHay == null) {
@@ -22,8 +24,8 @@ public class EsLoQueHay extends Observable{
 	}
 
 	/**
-	 * 
-	 * @param pCarta
+	 * Añade la carta especificada a Es Lo Que Hay.
+	 * @param pCarta, la carta que queremos dar la patada a Es Lo Que Hay.
 	 */
 	public void addCarta(Carta pCarta) {
 		// TODO - implement EsLoQueHay.addCarta
@@ -31,6 +33,9 @@ public class EsLoQueHay extends Observable{
 		setChanged();
 		notifyObservers("EsLoQueHay");
 	}
+	/**
+	 * @return la última carta que ha entrado a Es Lo Que Hay.
+	 */
 	public String ultimaCarta() {
 		return listaCartas.getLast().getNombre();
 	}

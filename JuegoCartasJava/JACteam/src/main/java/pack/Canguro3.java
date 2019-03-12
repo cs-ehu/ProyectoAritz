@@ -7,6 +7,11 @@ public class Canguro3 implements Animalada{
 	public Canguro3() {
 		random = new Random();
 	}
+	/**
+	 * Un canguro salta por encima del último o de los dos últimos animales de la fila
+(aleatoriamente), sin importar la fuerza de dichos animales
+	 */
+	@Override
 	public void realizarAnimalada() {
 		int i;
 		i = random.nextInt(2);

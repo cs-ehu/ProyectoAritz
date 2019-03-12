@@ -15,11 +15,17 @@ public class BDbarbestialDAO {
 	private BDbarbestialDAO() {
 		// TODO Auto-generated constructor stub
 	}
-
+	/**
+	 * 
+	 * @return La instancia del objeto de acceso a datos .
+	 */
 	public static BDbarbestialDAO getbarbestialDAO() {
 		return mbarbestialDAO;
 	}
-
+	/**
+	 * Comprueba que está establecida la conexión, y si no es así la crea.
+	 * @throws BDErrorConexion Excepción de que no ha podido realizarse la conexión.
+	 */
 	private void ensureConnected() throws BDErrorConexion {
 		if (con == null) {
 			synchronized (this) {
@@ -40,7 +46,10 @@ public class BDbarbestialDAO {
 			}
 		}
 	}
-
+	/**
+	 * 
+	 * @return Devuelve el número de tuplas que tiene la tabla con los usuarios en la base de datos.
+	 */
 	public int getNumFilas() {
 		try {
 			ensureConnected();
@@ -58,7 +67,10 @@ public class BDbarbestialDAO {
 			return 0;
 		}
 	}
-
+	/**
+	 * 
+	 * @return Devuelve la List con la información de los usuarios registrada en la base de datos.
+	 */
 	public List<BDInfoUsuario> getInfoUsuarios() {
 		List<BDInfoUsuario> result = new ArrayList<>();
 		try {
@@ -91,6 +103,11 @@ public class BDbarbestialDAO {
 		}
 		return result;
 	}
+	/**
+	 * Registra en la base de datos un nuevo jugador.
+	 * @param pUsu, nombre del usuario.
+	 * @param pContra, la contraseña del usuario.
+	 */
 	public void resgistrar(String pUsu, String pContra) {
 		try {
 			ensureConnected();
@@ -105,6 +122,11 @@ public class BDbarbestialDAO {
 			e.printStackTrace();
 		}
 	}
+	/**
+	 * Registra la nueva puntuación del usuario.
+	 * @param pUsu, el usuario al que se le registra la puntuación.
+	 * @param pPunt, la puntuación lograda en el juego.
+	 */
 	public void registrarPuntuacion(String pUsu, int pPunt) {
 		try {
 			ensureConnected();
@@ -119,6 +141,12 @@ public class BDbarbestialDAO {
 			e.printStackTrace();
 		}
 	}
+	/**
+	 * 
+	 * @param pUsu, el usuario a comprobar.
+	 * @param pContra, la contraseña a corroborar con la que está registrada en la base de datos.
+	 * @return True si es la contraseña registrada en la base de datos para este usuario, False en caso contrario.
+	 */
 	public boolean contraseñaCorrecta(String pUsu, String pContra) {
 		boolean result = false;
 		try {
@@ -139,6 +167,11 @@ public class BDbarbestialDAO {
 		}
 		return result;
 	}
+	/**
+	 * 
+	 * @param pUsu, nombre de usuario a comprobar si ya estaba registrado previamente.
+	 * @return True si ya existe dicho usuario, False en caso contrario.
+	 */
 	public boolean existeUsuario(String pUsu) {
 		boolean result = false;
 		try {
@@ -160,7 +193,10 @@ public class BDbarbestialDAO {
 		}
 		return result;
 	}
-
+	/**
+	 * 
+	 * @return la List con la información de las columnas de la base de datos
+	 */
 	public List<BDInfoColumna> getMetaDatosUsuarios() {
 		List<BDInfoColumna> result = new ArrayList<>();
 		try {

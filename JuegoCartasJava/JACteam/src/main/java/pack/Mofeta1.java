@@ -4,8 +4,13 @@ import java.util.Iterator;
 
 public class Mofeta1 implements Animalada{
 	public Mofeta1() {
-		
 	}
+	/**
+	 * Una mofeta repele a todos los animales de las dos especies más fuertes que
+haya en en la cola, pero nunca a otras mofetas. Los animales repelidos se
+colocan en la carta «ES LO QUE HAY».
+	 */
+	@Override
 	public void realizarAnimalada() {
 		int numMasAlto = 0;
 		Iterator<Carta> itr = ColaEntrada.getColaEntrada().getListaCartas().iterator();

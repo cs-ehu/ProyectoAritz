@@ -7,7 +7,15 @@ public class Mono4 implements Animalada{
 	public Mono4() {
 		
 	}
-
+	/**
+	 * Un único mono en la cola, no causa ningún efecto.
+	 * Si un mono adicional (además del primero) llega a la cola, la pandilla de
+monos espanta a todos los hipopótamos y los cocodrilos que haya en la
+cola, enviándolos a la carta «ES LO QUE HAY». Seguidamente, el mono recién
+jugado se cuela delante de todos los animales y se pone el primero de la cola,
+delante de la Puerta del Cielo, convocando a sus colegas monos directamente
+detrás de él, pero en orden inverso al que se encontraban.
+	 */
 	@Override
 	public void realizarAnimalada() {
 		LinkedList<Carta> listaMonos = new LinkedList<Carta>();

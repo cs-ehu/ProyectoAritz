@@ -8,6 +8,10 @@ public class Hipopotamo11 implements Animalada {
 	public Hipopotamo11(Carta pCarta) {
 		mCarta=pCarta;
 	}
+	/**
+	 * Un hipopótamo embiste hacia la puerta. Sin embargo, no puede colarse delante de un
+miembro de su propia especie, de animales más fuertes (leones) o de las cebras.
+	 */
 	@Override
 	public void realizarAnimalada() {
 		// TODO Auto-generated method stub
@@ -27,5 +31,4 @@ public class Hipopotamo11 implements Animalada {
 			ColaEntrada.getColaEntrada().getListaCartas().addFirst(mCarta);
 		}
 	}
-	//Hola
 }

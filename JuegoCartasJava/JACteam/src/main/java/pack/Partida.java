@@ -13,7 +13,9 @@ public class Partida extends Observable{
 		// TODO - implement Partida.Partida
 		inicializar();
 	}
-
+	/**
+	 * @return la única instancia de la Partida creada, si no la crea.
+	 */
 	public static Partida getPartida() {
 		// TODO - implement Partida.getPartida
 		if(mPartida == null) {
@@ -21,7 +23,9 @@ public class Partida extends Observable{
 		}
 		return mPartida;
 	}
-
+	/**
+	 * Inicializa (crea las instancias de todos los elementos necesarios) la partida.
+	 */
 	public void inicializar() {
 		// TODO - implement Partida.inicializar
 		ColaEntrada.getColaEntrada();
@@ -30,15 +34,18 @@ public class Partida extends Observable{
 		jugador = JugadorReal.getJugadorReal();
 		IA.getIA();
 	}
-
+	/**
+	 * Ejecuta el siguiente turno de la partida.
+	 * @param pCarta, la carta que se juega en este turno.
+	 */
 	public void siguienteTurno(int pCarta) {
 		// TODO - implement Partida.siguienteTurno
 		jugador.jugarTurno(pCarta);
-		terminarPartida();
-		
-		
-		
+		terminarPartida();	
 	}
+	/**
+	 * @return la puntuación lograda pro el JugadorReal en esta Partida.
+	 */
 	private int calcularPuntuacion() {
 		int punt = 0;
 		Iterator<Carta> itr = BarBestial.getBarBestial().getListaCartas().iterator();
@@ -50,6 +57,9 @@ public class Partida extends Observable{
 		}
 		return punt;
 	}
+	/**
+	 * Si ninguno de los Jugadores tienen Cartas calcula la puntuación del Real y termina la Partida actual.
+	 */
 	public void terminarPartida() {
 		// TODO - implement Partida.terminarPartida
 		if(!jugador.tienesCartas() && !IA.getIA().tienesCartas()) {
@@ -58,6 +68,10 @@ public class Partida extends Observable{
 			Interfaz1.getFrame().setVisible(false);
 		}
 	}
+	/**
+	 * Cambia el nombre de la Partida
+	 * @param pNom, el nuevo nombre de la Partida.
+	 */
 	public void setNombre(String pNom) {
 		nombre = pNom;
 	}

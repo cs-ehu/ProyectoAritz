@@ -21,13 +21,18 @@ public class Mazo{
 			cartasMazo.push(mazoProv.get(i));
 		}
 	}
-
+	/**
+	 * @return la Carta de encima del mazo.
+	 */
 	public Carta robarCarta() {
 		// TODO - implement Mazo.robarCarta
 		Carta carta= cartasMazo.pop();
 		return carta;
 		
 	}
+	/**
+	 * @return True si quedan Cartas en el Mazo, False en caso contrario.
+	 */
 	public boolean hayCartas() {
 		if(cartasMazo.isEmpty()) {
 			return false;

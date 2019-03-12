@@ -68,23 +68,44 @@ public class Carta {
 		nombre="/"+animal+color+".png";
 		// TODO - implement Carta.Carta
 	}
+	/**
+	 * @return Devuelve el numero de la carta
+	 */
 	public int getNum(){
 		return num;
 	}
+	/**
+	 * 
+	 * @return Devuelve el color de la carta
+	 */
 	public Color getColor(){
 		return color;
 	}
+	/**
+	 * 
+	 * @return Devuelve true si ha sido la última carta jugada, false en caso contrario
+	 */
 	public boolean getUltimaJugada() {
 		return ultimaJugada;
 	}
+	/**
+	 * Cambia el atributo ultimaJugada a false
+	 */
 	public void noUltimaJugada() {
 		ultimaJugada = false;
 	}
+	/**
+	 * La carta realiza su animalada en caso de que no sea una Cebra (que no tiene animalada)
+	 */
 	public void realizarAnimalada() {
 		if(animal!=Animal.CEBRA){
 		animalada.realizarAnimalada();
 		}
 	}
+	/**
+	 * 
+	 * @return Devuelve el nombre de la carta
+	 */
 	public String getNombre() {
 		return nombre;
 	}

@@ -8,6 +8,12 @@ public class Cocodrilo10 implements Animalada {
 	public Cocodrilo10(Carta pCarta) {
 		mCarta=pCarta;
 	}
+	/**
+	 * Un cocodrilo se come a cualquier animal más débil que tenga por delante. Si mientras
+come se topa con un animal más fuerte o con una cebra, el cocodrilo se detiene de inmediato.
+ Los animales comidos van a parar a la carta «ES LO QUE HAY».
+
+	 */
 	@Override
 	public void realizarAnimalada() {
 		// TODO Auto-generated method stub

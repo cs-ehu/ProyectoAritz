@@ -7,6 +7,10 @@ public class Loro2 implements Animalada{
 	public Loro2() {
 		random = new Random();
 	}
+	/**
+	 * Un loro ahuyenta a un animal en la cola, aleatoriamente, y lo coloca en
+la carta «ES LO QUE HAY».
+	 */
 	public void realizarAnimalada() {
 		int i;
 		if(ColaEntrada.getColaEntrada().getListaCartas().size()-2 >= 0){
