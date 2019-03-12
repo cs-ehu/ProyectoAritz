@@ -1,2 +1,1 @@
-# ProyectoAritz
-Proyecto Java del juego de cartas "Bar Bestial"
+# ProyectoAritzProyecto Java del juego de cartas "Bar Bestial".Proyecto realizado por Aritz Orive, Joel Villalobos y Christian Hernández

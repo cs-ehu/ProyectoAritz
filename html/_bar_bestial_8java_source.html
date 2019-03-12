@@ -1,0 +1,88 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.15"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>BarBestial: Fichero Fuente git/proyecto-jacteam-1/JACteam/src/main/java/pack/BarBestial.java</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">BarBestial
+   &#160;<span id="projectnumber">2.0</span>
+   </div>
+   <div id="projectbrief">BarBestial2.0</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generado por Doxygen 1.8.15 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Buscar');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Buscar');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_9bec7083027963d9f9ceae2cc7474de5.html">git</a></li><li class="navelem"><a class="el" href="dir_376cc4c7fee05d9a7399392e90edd75b.html">proyecto-jacteam-1</a></li><li class="navelem"><a class="el" href="dir_08cca7f219c37a71b4d8bde3a330dfce.html">JACteam</a></li><li class="navelem"><a class="el" href="dir_1f6f9dc0b4bf4a3316fb89e4d0a2d38b.html">src</a></li><li class="navelem"><a class="el" href="dir_9c72a37227a76c0614b9940c6b3220e8.html">main</a></li><li class="navelem"><a class="el" href="dir_fa58613c81838bb31f3eeaa405a9b17a.html">java</a></li><li class="navelem"><a class="el" href="dir_cc4436c237dac4f9e39215cd03d7f9d2.html">pack</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">BarBestial.java</div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="keyword">package </span>pack;</div><div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;</div><div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="keyword">import</span> java.util.LinkedList;</div><div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="keyword">import</span> java.util.Observable;</div><div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;</div><div class="line"><a name="l00006"></a><span class="lineno"><a class="line" href="classpack_1_1_bar_bestial.html">    6</a></span>&#160;<span class="keyword">public</span> <span class="keyword">class </span><a class="code" href="classpack_1_1_bar_bestial.html">BarBestial</a> <span class="keyword">extends</span> Observable {</div><div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;</div><div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;    <span class="keyword">private</span> <span class="keyword">static</span> <a class="code" href="classpack_1_1_bar_bestial.html">BarBestial</a> mBar;</div><div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;    <span class="keyword">private</span> LinkedList&lt;Carta&gt; listaCartas;</div><div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;</div><div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;    <span class="keyword">private</span>  <a class="code" href="classpack_1_1_bar_bestial.html">BarBestial</a>() {</div><div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;        <span class="comment">// TODO - implement BarBestial.BarBestial</span></div><div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;        listaCartas = <span class="keyword">new</span> LinkedList&lt;&gt;();</div><div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;    }</div><div class="line"><a name="l00019"></a><span class="lineno"><a class="line" href="classpack_1_1_bar_bestial.html#a0cae47366f7b0f9c168cc7022ac57c0f">   19</a></span>&#160;    <span class="keyword">public</span> LinkedList&lt;Carta&gt; <a class="code" href="classpack_1_1_bar_bestial.html#a0cae47366f7b0f9c168cc7022ac57c0f">getListaCartas</a>(){</div><div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;        <span class="keywordflow">return</span> listaCartas;</div><div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    }</div><div class="line"><a name="l00026"></a><span class="lineno"><a class="line" href="classpack_1_1_bar_bestial.html#a04988647a104add929df354b19d56458">   26</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">static</span> <a class="code" href="classpack_1_1_bar_bestial.html">BarBestial</a> <a class="code" href="classpack_1_1_bar_bestial.html#a04988647a104add929df354b19d56458">getBarBestial</a>() {</div><div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;        <span class="comment">// TODO - implement BarBestial.getBarBestial</span></div><div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;        <span class="keywordflow">if</span>(mBar ==<span class="keyword">null</span>) {</div><div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;            mBar = <span class="keyword">new</span> <a class="code" href="classpack_1_1_bar_bestial.html">BarBestial</a>();</div><div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;        }</div><div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;        <span class="keywordflow">return</span> mBar;</div><div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    }</div><div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;</div><div class="line"><a name="l00038"></a><span class="lineno"><a class="line" href="classpack_1_1_bar_bestial.html#abdeaa09d95acd91fe14e643fb8d6081f">   38</a></span>&#160;    <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code" href="classpack_1_1_bar_bestial.html#abdeaa09d95acd91fe14e643fb8d6081f">addCarta</a>(<a class="code" href="classpack_1_1_carta.html">Carta</a> pCarta) {</div><div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;        <span class="comment">// TODO - implement BarBestial.addCarta</span></div><div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;        listaCartas.add(pCarta);</div><div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;        setChanged();</div><div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;        notifyObservers(<span class="stringliteral">&quot;BarBestial&quot;</span>);</div><div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    }</div><div class="line"><a name="l00048"></a><span class="lineno"><a class="line" href="classpack_1_1_bar_bestial.html#a04f2fb6cab57b46afa286d80f332327d">   48</a></span>&#160;    <span class="keyword">public</span> String <a class="code" href="classpack_1_1_bar_bestial.html#a04f2fb6cab57b46afa286d80f332327d">ultimaCarta</a>() {</div><div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;        <span class="keywordflow">return</span> listaCartas.getLast().getNombre();</div><div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    }</div><div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;}</div><div class="ttc" id="classpack_1_1_carta_html"><div class="ttname"><a href="classpack_1_1_carta.html">pack.Carta</a></div><div class="ttdef"><b>Definition:</b> <a href="pack_2_carta_8java_source.html#l00002">Carta.java:2</a></div></div>
+<div class="ttc" id="classpack_1_1_bar_bestial_html_a04f2fb6cab57b46afa286d80f332327d"><div class="ttname"><a href="classpack_1_1_bar_bestial.html#a04f2fb6cab57b46afa286d80f332327d">pack.BarBestial.ultimaCarta</a></div><div class="ttdeci">String ultimaCarta()</div><div class="ttdef"><b>Definition:</b> <a href="_bar_bestial_8java_source.html#l00048">BarBestial.java:48</a></div></div>
+<div class="ttc" id="classpack_1_1_bar_bestial_html_a0cae47366f7b0f9c168cc7022ac57c0f"><div class="ttname"><a href="classpack_1_1_bar_bestial.html#a0cae47366f7b0f9c168cc7022ac57c0f">pack.BarBestial.getListaCartas</a></div><div class="ttdeci">LinkedList&lt; Carta &gt; getListaCartas()</div><div class="ttdef"><b>Definition:</b> <a href="_bar_bestial_8java_source.html#l00019">BarBestial.java:19</a></div></div>
+<div class="ttc" id="classpack_1_1_bar_bestial_html_a04988647a104add929df354b19d56458"><div class="ttname"><a href="classpack_1_1_bar_bestial.html#a04988647a104add929df354b19d56458">pack.BarBestial.getBarBestial</a></div><div class="ttdeci">static BarBestial getBarBestial()</div><div class="ttdef"><b>Definition:</b> <a href="_bar_bestial_8java_source.html#l00026">BarBestial.java:26</a></div></div>
+<div class="ttc" id="classpack_1_1_bar_bestial_html_abdeaa09d95acd91fe14e643fb8d6081f"><div class="ttname"><a href="classpack_1_1_bar_bestial.html#abdeaa09d95acd91fe14e643fb8d6081f">pack.BarBestial.addCarta</a></div><div class="ttdeci">void addCarta(Carta pCarta)</div><div class="ttdef"><b>Definition:</b> <a href="_bar_bestial_8java_source.html#l00038">BarBestial.java:38</a></div></div>
+<div class="ttc" id="classpack_1_1_bar_bestial_html"><div class="ttname"><a href="classpack_1_1_bar_bestial.html">pack.BarBestial</a></div><div class="ttdef"><b>Definition:</b> <a href="_bar_bestial_8java_source.html#l00006">BarBestial.java:6</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Generado por &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.15
+</small></address>
+</body>
+</html>
