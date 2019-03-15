@@ -1,0 +1,67 @@
+\hypertarget{_camaleon5_8java_source}{}\section{Camaleon5.\+java}
+\label{_camaleon5_8java_source}\index{git/proyecto-\/jacteam-\/1/JACteam/src/main/java/pack/Camaleon5.java@{git/proyecto-\/jacteam-\/1/JACteam/src/main/java/pack/Camaleon5.java}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001 \textcolor{keyword}{package }pack;}
+\DoxyCodeLine{00002 }
+\DoxyCodeLine{00003 \textcolor{keyword}{import} java.util.Random;}
+\DoxyCodeLine{00004 }
+\DoxyCodeLine{\Hypertarget{_camaleon5_8java_source_l00005}\mbox{\hyperlink{classpack_1_1_camaleon5}{00005}} \textcolor{keyword}{public} \textcolor{keyword}{class }\mbox{\hyperlink{classpack_1_1_camaleon5}{Camaleon5}} \textcolor{keyword}{implements} \mbox{\hyperlink{interfacepack_1_1_animalada}{Animalada}}\{}
+\DoxyCodeLine{00006     \textcolor{keyword}{private} Random random;}
+\DoxyCodeLine{00007     \textcolor{keyword}{private} \mbox{\hyperlink{classpack_1_1_carta}{Carta}} carta;}
+\DoxyCodeLine{00008     \textcolor{keyword}{public} \mbox{\hyperlink{classpack_1_1_camaleon5}{Camaleon5}}(\mbox{\hyperlink{classpack_1_1_carta}{Carta}} pCarta) \{}
+\DoxyCodeLine{00009         random = \textcolor{keyword}{new} Random();}
+\DoxyCodeLine{00010         carta=pCarta;}
+\DoxyCodeLine{00011     \}}
+\DoxyCodeLine{00019     @Override}
+\DoxyCodeLine{\Hypertarget{_camaleon5_8java_source_l00020}\mbox{\hyperlink{classpack_1_1_camaleon5_a316574289ce95ac4714211bdea115d12}{00020}}     \textcolor{keyword}{public} \textcolor{keywordtype}{void} \mbox{\hyperlink{classpack_1_1_camaleon5_a316574289ce95ac4714211bdea115d12}{realizarAnimalada}}() \{}
+\DoxyCodeLine{00021         \textcolor{keywordtype}{int} i;}
+\DoxyCodeLine{00022         \mbox{\hyperlink{interfacepack_1_1_animalada}{Animalada}} anim = \textcolor{keyword}{null};}
+\DoxyCodeLine{00023         \textcolor{keywordtype}{int} nuevaFuerza = 0;}
+\DoxyCodeLine{00024         \textcolor{keywordflow}{if}(\mbox{\hyperlink{classpack_1_1_cola_entrada}{ColaEntrada}}.\mbox{\hyperlink{classpack_1_1_cola_entrada_a66fb2b27ccd15322047bd5de159402a8}{getColaEntrada}}().\mbox{\hyperlink{classpack_1_1_cola_entrada_a8bdb2f738d5f8373b583952b566c8a32}{getListaCartas}}().size()-2>=0)\{}
+\DoxyCodeLine{00025             i = random.nextInt(\mbox{\hyperlink{classpack_1_1_cola_entrada}{ColaEntrada}}.\mbox{\hyperlink{classpack_1_1_cola_entrada_a66fb2b27ccd15322047bd5de159402a8}{getColaEntrada}}().\mbox{\hyperlink{classpack_1_1_cola_entrada_a8bdb2f738d5f8373b583952b566c8a32}{getListaCartas}}().size()-1);}
+\DoxyCodeLine{00026             nuevaFuerza = \mbox{\hyperlink{classpack_1_1_cola_entrada}{ColaEntrada}}.\mbox{\hyperlink{classpack_1_1_cola_entrada_a66fb2b27ccd15322047bd5de159402a8}{getColaEntrada}}().\mbox{\hyperlink{classpack_1_1_cola_entrada_a8bdb2f738d5f8373b583952b566c8a32}{getListaCartas}}().get(i).getNum();}
+\DoxyCodeLine{00027         \}}
+\DoxyCodeLine{00028         \textcolor{keywordflow}{switch}(nuevaFuerza) \{}
+\DoxyCodeLine{00029         \textcolor{keywordflow}{case} 1:}
+\DoxyCodeLine{00030             anim = \textcolor{keyword}{new} \mbox{\hyperlink{classpack_1_1_mofeta1}{Mofeta1}}();}
+\DoxyCodeLine{00031             \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00032         \textcolor{keywordflow}{case} 2:}
+\DoxyCodeLine{00033             anim = \textcolor{keyword}{new} \mbox{\hyperlink{classpack_1_1_loro2}{Loro2}}();}
+\DoxyCodeLine{00034             \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00035         \textcolor{keywordflow}{case} 3:}
+\DoxyCodeLine{00036             anim = \textcolor{keyword}{new} \mbox{\hyperlink{classpack_1_1_canguro3}{Canguro3}}();}
+\DoxyCodeLine{00037             \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00038         \textcolor{keywordflow}{case} 4:}
+\DoxyCodeLine{00039             anim = \textcolor{keyword}{new} \mbox{\hyperlink{classpack_1_1_mono4}{Mono4}}();}
+\DoxyCodeLine{00040             \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00041         \textcolor{keywordflow}{case} 5:}
+\DoxyCodeLine{00042             \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00043         \textcolor{keywordflow}{case} 6:}
+\DoxyCodeLine{00044             anim = \textcolor{keyword}{new} \mbox{\hyperlink{classpack_1_1_foca6}{Foca6}}();}
+\DoxyCodeLine{00045             \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00046         \textcolor{keywordflow}{case} 7:}
+\DoxyCodeLine{00047             \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00048         \textcolor{keywordflow}{case} 8:}
+\DoxyCodeLine{00049             anim = \textcolor{keyword}{new} \mbox{\hyperlink{classpack_1_1_jirafa8}{Jirafa8}}(carta);}
+\DoxyCodeLine{00050             \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00051         \textcolor{keywordflow}{case} 9:}
+\DoxyCodeLine{00052             anim = \textcolor{keyword}{new} \mbox{\hyperlink{classpack_1_1_serpiente9}{Serpiente9}}();}
+\DoxyCodeLine{00053             \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00054         \textcolor{keywordflow}{case} 10:}
+\DoxyCodeLine{00055             anim = \textcolor{keyword}{new} \mbox{\hyperlink{classpack_1_1_cocodrilo10}{Cocodrilo10}}(carta);}
+\DoxyCodeLine{00056             \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00057         \textcolor{keywordflow}{case} 11:}
+\DoxyCodeLine{00058             anim = \textcolor{keyword}{new} \mbox{\hyperlink{classpack_1_1_hipopotamo11}{Hipopotamo11}}(carta);}
+\DoxyCodeLine{00059             \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00060         \textcolor{keywordflow}{case} 12:}
+\DoxyCodeLine{00061             anim = \textcolor{keyword}{new} \mbox{\hyperlink{classpack_1_1_leon12}{Leon12}}();}
+\DoxyCodeLine{00062             \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00063         \}}
+\DoxyCodeLine{00064         \textcolor{keywordflow}{if}(anim!=\textcolor{keyword}{null}) \{}
+\DoxyCodeLine{00065             anim.\mbox{\hyperlink{interfacepack_1_1_animalada_a5ba346bdbccde39f3ea438ae8cbf8c1b}{realizarAnimalada}}();}
+\DoxyCodeLine{00066         \}}
+\DoxyCodeLine{00067     \}}
+\DoxyCodeLine{00068 \}}
+
+\end{DoxyCode}

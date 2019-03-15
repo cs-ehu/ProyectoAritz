@@ -1,0 +1,30 @@
+\hypertarget{_canguro3_8java_source}{}\section{Canguro3.\+java}
+\label{_canguro3_8java_source}\index{git/proyecto-\/jacteam-\/1/JACteam/src/main/java/pack/Canguro3.java@{git/proyecto-\/jacteam-\/1/JACteam/src/main/java/pack/Canguro3.java}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001 \textcolor{keyword}{package }pack;}
+\DoxyCodeLine{00002 }
+\DoxyCodeLine{00003 \textcolor{keyword}{import} java.util.Random;}
+\DoxyCodeLine{00004 }
+\DoxyCodeLine{\Hypertarget{_canguro3_8java_source_l00005}\mbox{\hyperlink{classpack_1_1_canguro3}{00005}} \textcolor{keyword}{public} \textcolor{keyword}{class }\mbox{\hyperlink{classpack_1_1_canguro3}{Canguro3}} \textcolor{keyword}{implements} \mbox{\hyperlink{interfacepack_1_1_animalada}{Animalada}}\{}
+\DoxyCodeLine{00006     \textcolor{keyword}{private} Random random;}
+\DoxyCodeLine{00007     \textcolor{keyword}{public} \mbox{\hyperlink{classpack_1_1_canguro3}{Canguro3}}() \{}
+\DoxyCodeLine{00008         random = \textcolor{keyword}{new} Random();}
+\DoxyCodeLine{00009     \}}
+\DoxyCodeLine{00014     @Override}
+\DoxyCodeLine{\Hypertarget{_canguro3_8java_source_l00015}\mbox{\hyperlink{classpack_1_1_canguro3_af17d11ef1a9daab80ac2c48d9e7d8c37}{00015}}     \textcolor{keyword}{public} \textcolor{keywordtype}{void} \mbox{\hyperlink{classpack_1_1_canguro3_af17d11ef1a9daab80ac2c48d9e7d8c37}{realizarAnimalada}}() \{}
+\DoxyCodeLine{00016         \textcolor{keywordtype}{int} i;}
+\DoxyCodeLine{00017         i = random.nextInt(2);}
+\DoxyCodeLine{00018         }
+\DoxyCodeLine{00019         \textcolor{keywordflow}{if} (i == 0 \&\& \mbox{\hyperlink{classpack_1_1_cola_entrada}{ColaEntrada}}.\mbox{\hyperlink{classpack_1_1_cola_entrada_a66fb2b27ccd15322047bd5de159402a8}{getColaEntrada}}().\mbox{\hyperlink{classpack_1_1_cola_entrada_a8bdb2f738d5f8373b583952b566c8a32}{getListaCartas}}().size()>2)\{}
+\DoxyCodeLine{00020             \mbox{\hyperlink{classpack_1_1_carta}{Carta}} carta = \mbox{\hyperlink{classpack_1_1_cola_entrada}{ColaEntrada}}.\mbox{\hyperlink{classpack_1_1_cola_entrada_a66fb2b27ccd15322047bd5de159402a8}{getColaEntrada}}().\mbox{\hyperlink{classpack_1_1_cola_entrada_a8bdb2f738d5f8373b583952b566c8a32}{getListaCartas}}().pollLast();}
+\DoxyCodeLine{00021             \mbox{\hyperlink{classpack_1_1_cola_entrada}{ColaEntrada}}.\mbox{\hyperlink{classpack_1_1_cola_entrada_a66fb2b27ccd15322047bd5de159402a8}{getColaEntrada}}().\mbox{\hyperlink{classpack_1_1_cola_entrada_a8bdb2f738d5f8373b583952b566c8a32}{getListaCartas}}().add(\mbox{\hyperlink{classpack_1_1_cola_entrada}{ColaEntrada}}.\mbox{\hyperlink{classpack_1_1_cola_entrada_a66fb2b27ccd15322047bd5de159402a8}{getColaEntrada}}().\mbox{\hyperlink{classpack_1_1_cola_entrada_a8bdb2f738d5f8373b583952b566c8a32}{getListaCartas}}().size()-1, carta);}
+\DoxyCodeLine{00022         \}}
+\DoxyCodeLine{00023         \textcolor{keywordflow}{else} \textcolor{keywordflow}{if}(i == 1 \&\& \mbox{\hyperlink{classpack_1_1_cola_entrada}{ColaEntrada}}.\mbox{\hyperlink{classpack_1_1_cola_entrada_a66fb2b27ccd15322047bd5de159402a8}{getColaEntrada}}().\mbox{\hyperlink{classpack_1_1_cola_entrada_a8bdb2f738d5f8373b583952b566c8a32}{getListaCartas}}().size()>3)\{}
+\DoxyCodeLine{00024             \mbox{\hyperlink{classpack_1_1_carta}{Carta}} carta = \mbox{\hyperlink{classpack_1_1_cola_entrada}{ColaEntrada}}.\mbox{\hyperlink{classpack_1_1_cola_entrada_a66fb2b27ccd15322047bd5de159402a8}{getColaEntrada}}().\mbox{\hyperlink{classpack_1_1_cola_entrada_a8bdb2f738d5f8373b583952b566c8a32}{getListaCartas}}().pollLast();}
+\DoxyCodeLine{00025             \mbox{\hyperlink{classpack_1_1_cola_entrada}{ColaEntrada}}.\mbox{\hyperlink{classpack_1_1_cola_entrada_a66fb2b27ccd15322047bd5de159402a8}{getColaEntrada}}().\mbox{\hyperlink{classpack_1_1_cola_entrada_a8bdb2f738d5f8373b583952b566c8a32}{getListaCartas}}().add(\mbox{\hyperlink{classpack_1_1_cola_entrada}{ColaEntrada}}.\mbox{\hyperlink{classpack_1_1_cola_entrada_a66fb2b27ccd15322047bd5de159402a8}{getColaEntrada}}().\mbox{\hyperlink{classpack_1_1_cola_entrada_a8bdb2f738d5f8373b583952b566c8a32}{getListaCartas}}().size()-2, carta);}
+\DoxyCodeLine{00026         \}}
+\DoxyCodeLine{00027     \}}
+\DoxyCodeLine{00028 \}}
+
+\end{DoxyCode}

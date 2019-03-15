@@ -1,0 +1,24 @@
+\hypertarget{_loro2_8java_source}{}\section{Loro2.\+java}
+\label{_loro2_8java_source}\index{git/proyecto-\/jacteam-\/1/JACteam/src/main/java/pack/Loro2.java@{git/proyecto-\/jacteam-\/1/JACteam/src/main/java/pack/Loro2.java}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001 \textcolor{keyword}{package }pack;}
+\DoxyCodeLine{00002 }
+\DoxyCodeLine{00003 \textcolor{keyword}{import} java.util.Random;}
+\DoxyCodeLine{00004 }
+\DoxyCodeLine{\Hypertarget{_loro2_8java_source_l00005}\mbox{\hyperlink{classpack_1_1_loro2}{00005}} \textcolor{keyword}{public} \textcolor{keyword}{class }\mbox{\hyperlink{classpack_1_1_loro2}{Loro2}} \textcolor{keyword}{implements} \mbox{\hyperlink{interfacepack_1_1_animalada}{Animalada}}\{}
+\DoxyCodeLine{00006     \textcolor{keyword}{private} Random random;}
+\DoxyCodeLine{00007     \textcolor{keyword}{public} \mbox{\hyperlink{classpack_1_1_loro2}{Loro2}}() \{}
+\DoxyCodeLine{00008         random = \textcolor{keyword}{new} Random();}
+\DoxyCodeLine{00009     \}}
+\DoxyCodeLine{\Hypertarget{_loro2_8java_source_l00014}\mbox{\hyperlink{classpack_1_1_loro2_a8e28b3452e5db8af320658d2aa070662}{00014}}     \textcolor{keyword}{public} \textcolor{keywordtype}{void} \mbox{\hyperlink{classpack_1_1_loro2_a8e28b3452e5db8af320658d2aa070662}{realizarAnimalada}}() \{}
+\DoxyCodeLine{00015         \textcolor{keywordtype}{int} i;}
+\DoxyCodeLine{00016         \textcolor{keywordflow}{if}(\mbox{\hyperlink{classpack_1_1_cola_entrada}{ColaEntrada}}.\mbox{\hyperlink{classpack_1_1_cola_entrada_a66fb2b27ccd15322047bd5de159402a8}{getColaEntrada}}().\mbox{\hyperlink{classpack_1_1_cola_entrada_a8bdb2f738d5f8373b583952b566c8a32}{getListaCartas}}().size()-2 >= 0)\{}
+\DoxyCodeLine{00017         i = random.nextInt(\mbox{\hyperlink{classpack_1_1_cola_entrada}{ColaEntrada}}.\mbox{\hyperlink{classpack_1_1_cola_entrada_a66fb2b27ccd15322047bd5de159402a8}{getColaEntrada}}().\mbox{\hyperlink{classpack_1_1_cola_entrada_a8bdb2f738d5f8373b583952b566c8a32}{getListaCartas}}().size()-1);}
+\DoxyCodeLine{00018         \mbox{\hyperlink{classpack_1_1_es_lo_que_hay}{EsLoQueHay}}.\mbox{\hyperlink{classpack_1_1_es_lo_que_hay_a20aa518e9d66cc019b0cc87b7e93790a}{getEsLoQueHay}}().\mbox{\hyperlink{classpack_1_1_es_lo_que_hay_acb67e9480ca01434ffcf7940f76d5fe0}{addCarta}}(\mbox{\hyperlink{classpack_1_1_cola_entrada}{ColaEntrada}}.\mbox{\hyperlink{classpack_1_1_cola_entrada_a66fb2b27ccd15322047bd5de159402a8}{getColaEntrada}}().\mbox{\hyperlink{classpack_1_1_cola_entrada_a8bdb2f738d5f8373b583952b566c8a32}{getListaCartas}}().get(i));}
+\DoxyCodeLine{00019         \mbox{\hyperlink{classpack_1_1_cola_entrada}{ColaEntrada}}.\mbox{\hyperlink{classpack_1_1_cola_entrada_a66fb2b27ccd15322047bd5de159402a8}{getColaEntrada}}().\mbox{\hyperlink{classpack_1_1_cola_entrada_a8bdb2f738d5f8373b583952b566c8a32}{getListaCartas}}().remove(i);}
+\DoxyCodeLine{00020         \}}
+\DoxyCodeLine{00021     \}}
+\DoxyCodeLine{00022 \}}
+
+\end{DoxyCode}

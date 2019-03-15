@@ -1,0 +1,93 @@
+\hypertarget{pack_2_carta_8java_source}{}\section{Carta.\+java}
+\label{pack_2_carta_8java_source}\index{git/proyecto-\/jacteam-\/1/JACteam/src/main/java/pack/Carta.java@{git/proyecto-\/jacteam-\/1/JACteam/src/main/java/pack/Carta.java}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001 \textcolor{keyword}{package }pack;}
+\DoxyCodeLine{\Hypertarget{pack_2_carta_8java_source_l00002}\mbox{\hyperlink{classpack_1_1_carta}{00002}} \textcolor{keyword}{public} \textcolor{keyword}{class }\mbox{\hyperlink{classpack_1_1_carta}{Carta}} \{}
+\DoxyCodeLine{00003 }
+\DoxyCodeLine{00004     \textcolor{keyword}{private} \textcolor{keywordtype}{int} num;}
+\DoxyCodeLine{00005     \textcolor{keyword}{private} \mbox{\hyperlink{enumpack_1_1_color}{Color}} color;}
+\DoxyCodeLine{00006     \textcolor{keyword}{private} \mbox{\hyperlink{enumpack_1_1_animal}{Animal}} animal;}
+\DoxyCodeLine{00007     \textcolor{keyword}{private} String nombre;}
+\DoxyCodeLine{00008     \textcolor{keyword}{private} \textcolor{keywordtype}{boolean} ultimaJugada = \textcolor{keyword}{true};}
+\DoxyCodeLine{00009     \textcolor{keyword}{private} \mbox{\hyperlink{interfacepack_1_1_animalada}{Animalada}} animalada;}
+\DoxyCodeLine{\Hypertarget{pack_2_carta_8java_source_l00015}\mbox{\hyperlink{classpack_1_1_carta_a8cf42bc073f31403cee0284351d3a62f}{00015}}     \textcolor{keyword}{public} \mbox{\hyperlink{classpack_1_1_carta_a8cf42bc073f31403cee0284351d3a62f}{Carta}}(\mbox{\hyperlink{enumpack_1_1_color}{Color}} pColor, \textcolor{keywordtype}{int} pNum) \{}
+\DoxyCodeLine{00016         color = pColor;}
+\DoxyCodeLine{00017         num = pNum;}
+\DoxyCodeLine{00018         \textcolor{keywordflow}{switch}(pNum) \{}
+\DoxyCodeLine{00019         \textcolor{keywordflow}{case} 1:}
+\DoxyCodeLine{00020             animal = \mbox{\hyperlink{enumpack_1_1_animal}{Animal}}.MOFETA;}
+\DoxyCodeLine{00021             animalada = \textcolor{keyword}{new} \mbox{\hyperlink{classpack_1_1_mofeta1}{Mofeta1}}();}
+\DoxyCodeLine{00022             \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00023         \textcolor{keywordflow}{case} 2:}
+\DoxyCodeLine{00024             animal = \mbox{\hyperlink{enumpack_1_1_animal}{Animal}}.LORO;}
+\DoxyCodeLine{00025             animalada = \textcolor{keyword}{new} \mbox{\hyperlink{classpack_1_1_loro2}{Loro2}}();}
+\DoxyCodeLine{00026             \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00027         \textcolor{keywordflow}{case} 3:}
+\DoxyCodeLine{00028             animal = \mbox{\hyperlink{enumpack_1_1_animal}{Animal}}.CANGURO;}
+\DoxyCodeLine{00029             animalada = \textcolor{keyword}{new} \mbox{\hyperlink{classpack_1_1_canguro3}{Canguro3}}();}
+\DoxyCodeLine{00030             \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00031         \textcolor{keywordflow}{case} 4:}
+\DoxyCodeLine{00032             animal = \mbox{\hyperlink{enumpack_1_1_animal}{Animal}}.MONO;}
+\DoxyCodeLine{00033             animalada = \textcolor{keyword}{new} \mbox{\hyperlink{classpack_1_1_mono4}{Mono4}}();}
+\DoxyCodeLine{00034             \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00035         \textcolor{keywordflow}{case} 5:}
+\DoxyCodeLine{00036             animal = \mbox{\hyperlink{enumpack_1_1_animal}{Animal}}.CAMALEON;}
+\DoxyCodeLine{00037             animalada = \textcolor{keyword}{new} \mbox{\hyperlink{classpack_1_1_camaleon5}{Camaleon5}}(\textcolor{keyword}{this});}
+\DoxyCodeLine{00038             \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00039         \textcolor{keywordflow}{case} 6:}
+\DoxyCodeLine{00040             animal = \mbox{\hyperlink{enumpack_1_1_animal}{Animal}}.FOCA;}
+\DoxyCodeLine{00041             animalada = \textcolor{keyword}{new} \mbox{\hyperlink{classpack_1_1_foca6}{Foca6}}();}
+\DoxyCodeLine{00042             \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00043         \textcolor{keywordflow}{case} 7:}
+\DoxyCodeLine{00044             animal = \mbox{\hyperlink{enumpack_1_1_animal}{Animal}}.CEBRA;}
+\DoxyCodeLine{00045             animalada = \textcolor{keyword}{null};}
+\DoxyCodeLine{00046             \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00047         \textcolor{keywordflow}{case} 8:}
+\DoxyCodeLine{00048             animal = \mbox{\hyperlink{enumpack_1_1_animal}{Animal}}.JIRAFA;}
+\DoxyCodeLine{00049             animalada = \textcolor{keyword}{new} \mbox{\hyperlink{classpack_1_1_jirafa8}{Jirafa8}}(\textcolor{keyword}{this});}
+\DoxyCodeLine{00050             \textcolor{keywordflow}{break};  }
+\DoxyCodeLine{00051         \textcolor{keywordflow}{case} 9:}
+\DoxyCodeLine{00052             animal = \mbox{\hyperlink{enumpack_1_1_animal}{Animal}}.SERPIENTE;}
+\DoxyCodeLine{00053             animalada = \textcolor{keyword}{new} \mbox{\hyperlink{classpack_1_1_serpiente9}{Serpiente9}}();}
+\DoxyCodeLine{00054             \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00055         \textcolor{keywordflow}{case} 10:}
+\DoxyCodeLine{00056             animal = \mbox{\hyperlink{enumpack_1_1_animal}{Animal}}.COCODRILO;}
+\DoxyCodeLine{00057             animalada = \textcolor{keyword}{new} \mbox{\hyperlink{classpack_1_1_cocodrilo10}{Cocodrilo10}}(\textcolor{keyword}{this});}
+\DoxyCodeLine{00058             \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00059         \textcolor{keywordflow}{case} 11:}
+\DoxyCodeLine{00060             animal = \mbox{\hyperlink{enumpack_1_1_animal}{Animal}}.HIPOPOTAMO;}
+\DoxyCodeLine{00061             animalada = \textcolor{keyword}{new} \mbox{\hyperlink{classpack_1_1_hipopotamo11}{Hipopotamo11}}(\textcolor{keyword}{this});}
+\DoxyCodeLine{00062             \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00063         \textcolor{keywordflow}{case} 12:}
+\DoxyCodeLine{00064             animal = \mbox{\hyperlink{enumpack_1_1_animal}{Animal}}.LEON;}
+\DoxyCodeLine{00065             animalada = \textcolor{keyword}{new} \mbox{\hyperlink{classpack_1_1_leon12}{Leon12}}();}
+\DoxyCodeLine{00066             \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00067         \}}
+\DoxyCodeLine{00068         nombre=\textcolor{stringliteral}{"/"}+animal+color+\textcolor{stringliteral}{".png"};}
+\DoxyCodeLine{00069         \textcolor{comment}{// TODO - implement Carta.Carta}}
+\DoxyCodeLine{00070     \}}
+\DoxyCodeLine{\Hypertarget{pack_2_carta_8java_source_l00074}\mbox{\hyperlink{classpack_1_1_carta_ac772a727e2e2abc726ff5001b5e02787}{00074}}     \textcolor{keyword}{public} \textcolor{keywordtype}{int} \mbox{\hyperlink{classpack_1_1_carta_ac772a727e2e2abc726ff5001b5e02787}{getNum}}()\{}
+\DoxyCodeLine{00075         \textcolor{keywordflow}{return} num;}
+\DoxyCodeLine{00076     \}}
+\DoxyCodeLine{\Hypertarget{pack_2_carta_8java_source_l00081}\mbox{\hyperlink{classpack_1_1_carta_a886e32f4b3bbb8dd295dfa278592f132}{00081}}     \textcolor{keyword}{public} \mbox{\hyperlink{enumpack_1_1_color}{Color}} \mbox{\hyperlink{classpack_1_1_carta_a886e32f4b3bbb8dd295dfa278592f132}{getColor}}()\{}
+\DoxyCodeLine{00082         \textcolor{keywordflow}{return} color;}
+\DoxyCodeLine{00083     \}}
+\DoxyCodeLine{\Hypertarget{pack_2_carta_8java_source_l00088}\mbox{\hyperlink{classpack_1_1_carta_a0ff7c29c7a368e1af1515abb8a72bf52}{00088}}     \textcolor{keyword}{public} \textcolor{keywordtype}{boolean} \mbox{\hyperlink{classpack_1_1_carta_a0ff7c29c7a368e1af1515abb8a72bf52}{getUltimaJugada}}() \{}
+\DoxyCodeLine{00089         \textcolor{keywordflow}{return} ultimaJugada;}
+\DoxyCodeLine{00090     \}}
+\DoxyCodeLine{\Hypertarget{pack_2_carta_8java_source_l00094}\mbox{\hyperlink{classpack_1_1_carta_ab4597db914f217e5c8f056a5e414ed9c}{00094}}     \textcolor{keyword}{public} \textcolor{keywordtype}{void} \mbox{\hyperlink{classpack_1_1_carta_ab4597db914f217e5c8f056a5e414ed9c}{noUltimaJugada}}() \{}
+\DoxyCodeLine{00095         ultimaJugada = \textcolor{keyword}{false};}
+\DoxyCodeLine{00096     \}}
+\DoxyCodeLine{\Hypertarget{pack_2_carta_8java_source_l00100}\mbox{\hyperlink{classpack_1_1_carta_a531e7a4e1d9ab112a58bb94e5fd98ea4}{00100}}     \textcolor{keyword}{public} \textcolor{keywordtype}{void} \mbox{\hyperlink{classpack_1_1_carta_a531e7a4e1d9ab112a58bb94e5fd98ea4}{realizarAnimalada}}() \{}
+\DoxyCodeLine{00101         \textcolor{keywordflow}{if}(animal!=\mbox{\hyperlink{enumpack_1_1_animal}{Animal}}.CEBRA)\{}
+\DoxyCodeLine{00102         animalada.\mbox{\hyperlink{interfacepack_1_1_animalada_a5ba346bdbccde39f3ea438ae8cbf8c1b}{realizarAnimalada}}();}
+\DoxyCodeLine{00103         \}}
+\DoxyCodeLine{00104     \}}
+\DoxyCodeLine{\Hypertarget{pack_2_carta_8java_source_l00109}\mbox{\hyperlink{classpack_1_1_carta_a7535ffe4a5e97ad087a7f495de13c087}{00109}}     \textcolor{keyword}{public} String \mbox{\hyperlink{classpack_1_1_carta_a7535ffe4a5e97ad087a7f495de13c087}{getNombre}}() \{}
+\DoxyCodeLine{00110         \textcolor{keywordflow}{return} nombre;}
+\DoxyCodeLine{00111     \}}
+\DoxyCodeLine{00112 }
+\DoxyCodeLine{00113 \}}
+
+\end{DoxyCode}

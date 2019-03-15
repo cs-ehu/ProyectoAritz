@@ -1,0 +1,41 @@
+\hypertarget{_bar_bestial_8java_source}{}\section{Bar\+Bestial.\+java}
+\label{_bar_bestial_8java_source}\index{git/proyecto-\/jacteam-\/1/JACteam/src/main/java/pack/BarBestial.java@{git/proyecto-\/jacteam-\/1/JACteam/src/main/java/pack/BarBestial.java}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001 \textcolor{keyword}{package }pack;}
+\DoxyCodeLine{00002 }
+\DoxyCodeLine{00003 \textcolor{keyword}{import} java.util.LinkedList;}
+\DoxyCodeLine{00004 \textcolor{keyword}{import} java.util.Observable;}
+\DoxyCodeLine{00005 }
+\DoxyCodeLine{\Hypertarget{_bar_bestial_8java_source_l00006}\mbox{\hyperlink{classpack_1_1_bar_bestial}{00006}} \textcolor{keyword}{public} \textcolor{keyword}{class }\mbox{\hyperlink{classpack_1_1_bar_bestial}{BarBestial}} \textcolor{keyword}{extends} Observable \{}
+\DoxyCodeLine{00007 }
+\DoxyCodeLine{00008     \textcolor{keyword}{private} \textcolor{keyword}{static} \mbox{\hyperlink{classpack_1_1_bar_bestial}{BarBestial}} mBar;}
+\DoxyCodeLine{00009     \textcolor{keyword}{private} LinkedList<Carta> listaCartas;}
+\DoxyCodeLine{00010 }
+\DoxyCodeLine{00011     \textcolor{keyword}{private}  \mbox{\hyperlink{classpack_1_1_bar_bestial}{BarBestial}}() \{}
+\DoxyCodeLine{00012         \textcolor{comment}{// TODO - implement BarBestial.BarBestial}}
+\DoxyCodeLine{00013         listaCartas = \textcolor{keyword}{new} LinkedList<>();}
+\DoxyCodeLine{00014     \}}
+\DoxyCodeLine{\Hypertarget{_bar_bestial_8java_source_l00019}\mbox{\hyperlink{classpack_1_1_bar_bestial_a0cae47366f7b0f9c168cc7022ac57c0f}{00019}}     \textcolor{keyword}{public} LinkedList<Carta> \mbox{\hyperlink{classpack_1_1_bar_bestial_a0cae47366f7b0f9c168cc7022ac57c0f}{getListaCartas}}()\{}
+\DoxyCodeLine{00020         \textcolor{keywordflow}{return} listaCartas;}
+\DoxyCodeLine{00021     \}}
+\DoxyCodeLine{\Hypertarget{_bar_bestial_8java_source_l00026}\mbox{\hyperlink{classpack_1_1_bar_bestial_a04988647a104add929df354b19d56458}{00026}}     \textcolor{keyword}{public} \textcolor{keyword}{static} \mbox{\hyperlink{classpack_1_1_bar_bestial}{BarBestial}} \mbox{\hyperlink{classpack_1_1_bar_bestial_a04988647a104add929df354b19d56458}{getBarBestial}}() \{}
+\DoxyCodeLine{00027         \textcolor{comment}{// TODO - implement BarBestial.getBarBestial}}
+\DoxyCodeLine{00028         \textcolor{keywordflow}{if}(mBar ==\textcolor{keyword}{null}) \{}
+\DoxyCodeLine{00029             mBar = \textcolor{keyword}{new} \mbox{\hyperlink{classpack_1_1_bar_bestial}{BarBestial}}();}
+\DoxyCodeLine{00030         \}}
+\DoxyCodeLine{00031         \textcolor{keywordflow}{return} mBar;}
+\DoxyCodeLine{00032     \}}
+\DoxyCodeLine{00033 }
+\DoxyCodeLine{\Hypertarget{_bar_bestial_8java_source_l00038}\mbox{\hyperlink{classpack_1_1_bar_bestial_abdeaa09d95acd91fe14e643fb8d6081f}{00038}}     \textcolor{keyword}{public} \textcolor{keywordtype}{void} \mbox{\hyperlink{classpack_1_1_bar_bestial_abdeaa09d95acd91fe14e643fb8d6081f}{addCarta}}(\mbox{\hyperlink{classpack_1_1_carta}{Carta}} pCarta) \{}
+\DoxyCodeLine{00039         \textcolor{comment}{// TODO - implement BarBestial.addCarta}}
+\DoxyCodeLine{00040         listaCartas.add(pCarta);}
+\DoxyCodeLine{00041         setChanged();}
+\DoxyCodeLine{00042         notifyObservers(\textcolor{stringliteral}{"BarBestial"});}
+\DoxyCodeLine{00043     \}}
+\DoxyCodeLine{\Hypertarget{_bar_bestial_8java_source_l00048}\mbox{\hyperlink{classpack_1_1_bar_bestial_a04f2fb6cab57b46afa286d80f332327d}{00048}}     \textcolor{keyword}{public} String \mbox{\hyperlink{classpack_1_1_bar_bestial_a04f2fb6cab57b46afa286d80f332327d}{ultimaCarta}}() \{}
+\DoxyCodeLine{00049         \textcolor{keywordflow}{return} listaCartas.getLast().getNombre();}
+\DoxyCodeLine{00050     \}}
+\DoxyCodeLine{00051 \}}
+
+\end{DoxyCode}

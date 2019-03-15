@@ -1,0 +1,26 @@
+\hypertarget{_jugador_real_8java_source}{}\section{Jugador\+Real.\+java}
+\label{_jugador_real_8java_source}\index{git/proyecto-\/jacteam-\/1/JACteam/src/main/java/pack/JugadorReal.java@{git/proyecto-\/jacteam-\/1/JACteam/src/main/java/pack/JugadorReal.java}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001 \textcolor{keyword}{package }pack;}
+\DoxyCodeLine{00002 }
+\DoxyCodeLine{\Hypertarget{_jugador_real_8java_source_l00003}\mbox{\hyperlink{classpack_1_1_jugador_real}{00003}} \textcolor{keyword}{public} \textcolor{keyword}{class }\mbox{\hyperlink{classpack_1_1_jugador_real}{JugadorReal}} \textcolor{keyword}{extends} \mbox{\hyperlink{classpack_1_1_jugador}{Jugador}}\{}
+\DoxyCodeLine{00004     \textcolor{keyword}{private} \textcolor{keyword}{static} \mbox{\hyperlink{classpack_1_1_jugador_real}{JugadorReal}} mJugador;}
+\DoxyCodeLine{00005     \textcolor{keyword}{private} \mbox{\hyperlink{classpack_1_1_jugador_real}{JugadorReal}}() \{}
+\DoxyCodeLine{00006         super(\mbox{\hyperlink{enumpack_1_1_color}{Color}}.AZUL);}
+\DoxyCodeLine{00007         setChanged();}
+\DoxyCodeLine{00008         notifyObservers(\textcolor{stringliteral}{"ManoJugador"});}
+\DoxyCodeLine{00009     \}}
+\DoxyCodeLine{\Hypertarget{_jugador_real_8java_source_l00014}\mbox{\hyperlink{classpack_1_1_jugador_real_a8ccc7ce1bb11b70f7d691292f1f68385}{00014}}     \textcolor{keyword}{public} \textcolor{keywordtype}{void} \mbox{\hyperlink{classpack_1_1_jugador_real_a8ccc7ce1bb11b70f7d691292f1f68385}{jugarTurno}}(\textcolor{keywordtype}{int} pCarta) \{}
+\DoxyCodeLine{00015         super.jugarTurno(pCarta);}
+\DoxyCodeLine{00016         \mbox{\hyperlink{classpack_1_1_i_a}{IA}}.\mbox{\hyperlink{classpack_1_1_i_a_a308f78f943c9e8932ed6fa4ef8a1a528}{getIA}}().\mbox{\hyperlink{classpack_1_1_i_a_a414330a7ef02b3af27dab8e2a3cc9181}{ejecutarTurno}}();}
+\DoxyCodeLine{00017     \}}
+\DoxyCodeLine{\Hypertarget{_jugador_real_8java_source_l00021}\mbox{\hyperlink{classpack_1_1_jugador_real_a85bac7cadb9d5d8897884d4987184775}{00021}}     \textcolor{keyword}{public} \textcolor{keyword}{static} \mbox{\hyperlink{classpack_1_1_jugador_real}{JugadorReal}} \mbox{\hyperlink{classpack_1_1_jugador_real_a85bac7cadb9d5d8897884d4987184775}{getJugadorReal}}() \{}
+\DoxyCodeLine{00022         \textcolor{keywordflow}{if}(mJugador==\textcolor{keyword}{null}) \{}
+\DoxyCodeLine{00023             mJugador= \textcolor{keyword}{new} \mbox{\hyperlink{classpack_1_1_jugador_real}{JugadorReal}}();}
+\DoxyCodeLine{00024         \}}
+\DoxyCodeLine{00025         \textcolor{keywordflow}{return} mJugador;}
+\DoxyCodeLine{00026     \}}
+\DoxyCodeLine{00027 \}}
+
+\end{DoxyCode}
