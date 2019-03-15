@@ -1,0 +1,51 @@
+\hypertarget{_mano_test_8java_source}{}\section{Mano\+Test.\+java}
+\label{_mano_test_8java_source}\index{git/proyecto-\/jacteam-\/1/JACteam/src/test/java/ManoTest.java@{git/proyecto-\/jacteam-\/1/JACteam/src/test/java/ManoTest.java}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001 \textcolor{keyword}{import} \textcolor{keyword}{static} org.junit.Assert.*;}
+\DoxyCodeLine{00002 }
+\DoxyCodeLine{00003 \textcolor{keyword}{import} java.util.LinkedList;}
+\DoxyCodeLine{00004 }
+\DoxyCodeLine{00005 \textcolor{keyword}{import} org.junit.Before;}
+\DoxyCodeLine{00006 \textcolor{keyword}{import} org.junit.Test;}
+\DoxyCodeLine{00007 }
+\DoxyCodeLine{00008 \textcolor{keyword}{import} pack.Carta;}
+\DoxyCodeLine{00009 \textcolor{keyword}{import} pack.Color;}
+\DoxyCodeLine{00010 \textcolor{keyword}{import} pack.Mano;}
+\DoxyCodeLine{00011 }
+\DoxyCodeLine{\Hypertarget{_mano_test_8java_source_l00012}\mbox{\hyperlink{class_mano_test}{00012}} \textcolor{keyword}{public} \textcolor{keyword}{class }\mbox{\hyperlink{class_mano_test}{ManoTest}} \{}
+\DoxyCodeLine{00013 }
+\DoxyCodeLine{00014     \textcolor{keyword}{private} \mbox{\hyperlink{classpack_1_1_mano}{Mano}} mano;}
+\DoxyCodeLine{00015     \textcolor{keyword}{private} \mbox{\hyperlink{classpack_1_1_carta}{Carta}} mono;}
+\DoxyCodeLine{00016     }
+\DoxyCodeLine{00017     @Before}
+\DoxyCodeLine{00018     \textcolor{keyword}{public} \textcolor{keywordtype}{void} setUp() \textcolor{keywordflow}{throws} Exception \{}
+\DoxyCodeLine{00019         mano = \textcolor{keyword}{new} \mbox{\hyperlink{classpack_1_1_mano}{Mano}}();}
+\DoxyCodeLine{00020         mono = \textcolor{keyword}{new} \mbox{\hyperlink{classpack_1_1_carta}{Carta}}(\mbox{\hyperlink{enumpack_1_1_color}{Color}}.AZUL, 4);}
+\DoxyCodeLine{00021     \}}
+\DoxyCodeLine{00022 }
+\DoxyCodeLine{00023     @Test}
+\DoxyCodeLine{00024     \textcolor{keyword}{public} \textcolor{keywordtype}{void} testAddCartas() \{}
+\DoxyCodeLine{00025         mano.\mbox{\hyperlink{classpack_1_1_mano_a1a8b77c1cdf2131e7f04b92f171b48c1}{addCarta}}(mono);}
+\DoxyCodeLine{00026         assertTrue(mano.\mbox{\hyperlink{classpack_1_1_mano_a566e5b6ddb754d7669a2c458caecb8a6}{getIterador}}().next() == mono);}
+\DoxyCodeLine{00027     \}}
+\DoxyCodeLine{00028     @Test}
+\DoxyCodeLine{00029     \textcolor{keyword}{public} \textcolor{keywordtype}{void} testJugarCarta() \{}
+\DoxyCodeLine{00030         mano.\mbox{\hyperlink{classpack_1_1_mano_a1a8b77c1cdf2131e7f04b92f171b48c1}{addCarta}}(mono);}
+\DoxyCodeLine{00031         mano.\mbox{\hyperlink{classpack_1_1_mano_ad796f72f211938da7f0c2044a495e7d3}{jugarCarta}}(0);}
+\DoxyCodeLine{00032         assertTrue(mano.\mbox{\hyperlink{classpack_1_1_mano_ae8bea49f286ac77196c54d6da1ddc3eb}{getSize}}() == 0);}
+\DoxyCodeLine{00033     \}}
+\DoxyCodeLine{00034     @Test}
+\DoxyCodeLine{00035     \textcolor{keyword}{public} \textcolor{keywordtype}{void} testHayCartas() \{}
+\DoxyCodeLine{00036         mano.\mbox{\hyperlink{classpack_1_1_mano_a1a8b77c1cdf2131e7f04b92f171b48c1}{addCarta}}(mono);}
+\DoxyCodeLine{00037         \textcolor{keywordflow}{if}(mano.\mbox{\hyperlink{classpack_1_1_mano_ade0fbb34140a50a6ce718f17320edda0}{hayCartas}}())\{}
+\DoxyCodeLine{00038             assertTrue(mano.\mbox{\hyperlink{classpack_1_1_mano_ae8bea49f286ac77196c54d6da1ddc3eb}{getSize}}() != 0);}
+\DoxyCodeLine{00039         \}}
+\DoxyCodeLine{00040         \textcolor{keywordflow}{else}\{}
+\DoxyCodeLine{00041             assertTrue(mano.\mbox{\hyperlink{classpack_1_1_mano_ae8bea49f286ac77196c54d6da1ddc3eb}{getSize}}() == 0);}
+\DoxyCodeLine{00042         \}}
+\DoxyCodeLine{00043     \}}
+\DoxyCodeLine{00044 }
+\DoxyCodeLine{00045 \}}
+
+\end{DoxyCode}

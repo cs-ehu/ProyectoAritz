@@ -1,0 +1,260 @@
+\hypertarget{_b_dbarbestial_d_a_o_8java_source}{}\section{B\+Dbarbestial\+D\+A\+O.\+java}
+\label{_b_dbarbestial_d_a_o_8java_source}\index{git/proyecto-\/jacteam-\/1/JACteam/src/main/java/pack/BDbarbestialDAO.java@{git/proyecto-\/jacteam-\/1/JACteam/src/main/java/pack/BDbarbestialDAO.java}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001 \textcolor{keyword}{package }pack;}
+\DoxyCodeLine{00002 \textcolor{keyword}{import} java.sql.Connection;}
+\DoxyCodeLine{00003 \textcolor{keyword}{import} java.sql.DriverManager;}
+\DoxyCodeLine{00004 \textcolor{keyword}{import} java.sql.ResultSet;}
+\DoxyCodeLine{00005 \textcolor{keyword}{import} java.sql.ResultSetMetaData;}
+\DoxyCodeLine{00006 \textcolor{keyword}{import} java.sql.SQLException;}
+\DoxyCodeLine{00007 \textcolor{keyword}{import} java.sql.Statement;}
+\DoxyCodeLine{00008 \textcolor{keyword}{import} java.util.ArrayList;}
+\DoxyCodeLine{00009 \textcolor{keyword}{import} java.util.List;}
+\DoxyCodeLine{00010 }
+\DoxyCodeLine{\Hypertarget{_b_dbarbestial_d_a_o_8java_source_l00011}\mbox{\hyperlink{classpack_1_1_b_dbarbestial_d_a_o}{00011}} \textcolor{keyword}{public} \textcolor{keyword}{class }\mbox{\hyperlink{classpack_1_1_b_dbarbestial_d_a_o}{BDbarbestialDAO}} \{}
+\DoxyCodeLine{00012     \textcolor{keyword}{private} \textcolor{keyword}{static} \mbox{\hyperlink{classpack_1_1_b_dbarbestial_d_a_o}{BDbarbestialDAO}} mbarbestialDAO = \textcolor{keyword}{new} \mbox{\hyperlink{classpack_1_1_b_dbarbestial_d_a_o}{BDbarbestialDAO}}();}
+\DoxyCodeLine{00013     \textcolor{keyword}{private} Connection con;}
+\DoxyCodeLine{00014 }
+\DoxyCodeLine{00015     \textcolor{keyword}{private} \mbox{\hyperlink{classpack_1_1_b_dbarbestial_d_a_o}{BDbarbestialDAO}}() \{}
+\DoxyCodeLine{00016         \textcolor{comment}{// TODO Auto-generated constructor stub}}
+\DoxyCodeLine{00017     \}}
+\DoxyCodeLine{\Hypertarget{_b_dbarbestial_d_a_o_8java_source_l00022}\mbox{\hyperlink{classpack_1_1_b_dbarbestial_d_a_o_a0ba1c678bf175e2ccd819f5d40f16b29}{00022}}     \textcolor{keyword}{public} \textcolor{keyword}{static} \mbox{\hyperlink{classpack_1_1_b_dbarbestial_d_a_o}{BDbarbestialDAO}} \mbox{\hyperlink{classpack_1_1_b_dbarbestial_d_a_o_a0ba1c678bf175e2ccd819f5d40f16b29}{getbarbestialDAO}}() \{}
+\DoxyCodeLine{00023         \textcolor{keywordflow}{return} mbarbestialDAO;}
+\DoxyCodeLine{00024     \}}
+\DoxyCodeLine{00029     \textcolor{keyword}{private} \textcolor{keywordtype}{void} ensureConnected() throws \mbox{\hyperlink{classpack_1_1_b_d_error_conexion}{BDErrorConexion}} \{}
+\DoxyCodeLine{00030         \textcolor{keywordflow}{if} (con == \textcolor{keyword}{null}) \{}
+\DoxyCodeLine{00031             \textcolor{keyword}{synchronized} (\textcolor{keyword}{this}) \{}
+\DoxyCodeLine{00032                 \textcolor{keywordflow}{if} (con == \textcolor{keyword}{null}) \{}
+\DoxyCodeLine{00033                     \textcolor{keywordflow}{try} \{}
+\DoxyCodeLine{00034                         Class.forName(\textcolor{stringliteral}{"org.sqlite.JDBC"});}
+\DoxyCodeLine{00035                     \} \textcolor{keywordflow}{catch} (ClassNotFoundException e1) \{}
+\DoxyCodeLine{00036                     \}}
+\DoxyCodeLine{00037                     ;}
+\DoxyCodeLine{00038                     \textcolor{keywordflow}{try} \{}
+\DoxyCodeLine{00039                         String url = \textcolor{stringliteral}{"jdbc:sqlite:./barbestial.db"};}
+\DoxyCodeLine{00040                         con = DriverManager.getConnection(url);}
+\DoxyCodeLine{00041                     \} \textcolor{keywordflow}{catch} (SQLException e) \{}
+\DoxyCodeLine{00042                         con = \textcolor{keyword}{null};}
+\DoxyCodeLine{00043                         \textcolor{keywordflow}{throw} \textcolor{keyword}{new} BDErrorConexion(e);}
+\DoxyCodeLine{00044                     \}}
+\DoxyCodeLine{00045                 \}}
+\DoxyCodeLine{00046             \}}
+\DoxyCodeLine{00047         \}}
+\DoxyCodeLine{00048     \}}
+\DoxyCodeLine{\Hypertarget{_b_dbarbestial_d_a_o_8java_source_l00053}\mbox{\hyperlink{classpack_1_1_b_dbarbestial_d_a_o_a78087b7abe23047a4569e6e2f81efddb}{00053}}     \textcolor{keyword}{public} \textcolor{keywordtype}{int} \mbox{\hyperlink{classpack_1_1_b_dbarbestial_d_a_o_a78087b7abe23047a4569e6e2f81efddb}{getNumFilas}}() \{}
+\DoxyCodeLine{00054         \textcolor{keywordflow}{try} \{}
+\DoxyCodeLine{00055             ensureConnected();}
+\DoxyCodeLine{00056             Statement st = con.createStatement();}
+\DoxyCodeLine{00057             ResultSet rs = st.executeQuery(\textcolor{stringliteral}{"SELECT count(*) as numUsuarios from registro"});}
+\DoxyCodeLine{00058             \textcolor{keywordflow}{return} rs.getInt(\textcolor{stringliteral}{"numUsuarios"});}
+\DoxyCodeLine{00059 }
+\DoxyCodeLine{00060         \} \textcolor{keywordflow}{catch} (\mbox{\hyperlink{classpack_1_1_b_d_error_conexion}{BDErrorConexion}} e) \{}
+\DoxyCodeLine{00061             \textcolor{comment}{// TODO Auto-generated catch block}}
+\DoxyCodeLine{00062             e.printStackTrace();}
+\DoxyCodeLine{00063             \textcolor{keywordflow}{return} 0;}
+\DoxyCodeLine{00064         \} \textcolor{keywordflow}{catch} (SQLException e) \{}
+\DoxyCodeLine{00065             \textcolor{comment}{// TODO Auto-generated catch block}}
+\DoxyCodeLine{00066             e.printStackTrace();}
+\DoxyCodeLine{00067             \textcolor{keywordflow}{return} 0;}
+\DoxyCodeLine{00068         \}}
+\DoxyCodeLine{00069     \}}
+\DoxyCodeLine{\Hypertarget{_b_dbarbestial_d_a_o_8java_source_l00074}\mbox{\hyperlink{classpack_1_1_b_dbarbestial_d_a_o_a8f794b1cca616f34ae6d1a65ba08fb5b}{00074}}     \textcolor{keyword}{public} List<BDInfoUsuario> \mbox{\hyperlink{classpack_1_1_b_dbarbestial_d_a_o_a8f794b1cca616f34ae6d1a65ba08fb5b}{getInfoUsuarios}}() \{}
+\DoxyCodeLine{00075         List<BDInfoUsuario> result = \textcolor{keyword}{new} ArrayList<>();}
+\DoxyCodeLine{00076         \textcolor{keywordflow}{try} \{}
+\DoxyCodeLine{00077             ensureConnected();}
+\DoxyCodeLine{00078             Statement st = con.createStatement();}
+\DoxyCodeLine{00079             ResultSet rs = st.executeQuery(\textcolor{stringliteral}{"SELECT usuario,puntuacion from registro"});}
+\DoxyCodeLine{00080             ResultSetMetaData metadata = rs.getMetaData();}
+\DoxyCodeLine{00081             \textcolor{comment}{// Procesar el resultset y añadir los datos}}
+\DoxyCodeLine{00082             \textcolor{keywordflow}{while} (rs.next()) \{}
+\DoxyCodeLine{00083                 \mbox{\hyperlink{classpack_1_1_b_d_info_usuario}{BDInfoUsuario}} infousu = \textcolor{keyword}{new} \mbox{\hyperlink{classpack_1_1_b_d_info_usuario}{BDInfoUsuario}}();}
+\DoxyCodeLine{00084                 \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 1; i <= metadata.getColumnCount(); i++) \{}
+\DoxyCodeLine{00085                     \textcolor{keywordflow}{if} (rs.getObject(i) != \textcolor{keyword}{null}) \{}
+\DoxyCodeLine{00086                         infousu.\mbox{\hyperlink{classpack_1_1_b_d_info_usuario_a02ef8073730317835bd60de6f96a6aeb}{addDato}}(rs.getObject(i).toString());}
+\DoxyCodeLine{00087                     \}}
+\DoxyCodeLine{00088                     \textcolor{keywordflow}{else} \{}
+\DoxyCodeLine{00089                         infousu.\mbox{\hyperlink{classpack_1_1_b_d_info_usuario_a02ef8073730317835bd60de6f96a6aeb}{addDato}}(\textcolor{stringliteral}{""});}
+\DoxyCodeLine{00090                     \}}
+\DoxyCodeLine{00091                 \}}
+\DoxyCodeLine{00092                 \textcolor{comment}{// Añadir la información a la lista}}
+\DoxyCodeLine{00093                 result.add(infousu);}
+\DoxyCodeLine{00094 }
+\DoxyCodeLine{00095             \}}
+\DoxyCodeLine{00096 }
+\DoxyCodeLine{00097         \} \textcolor{keywordflow}{catch} (\mbox{\hyperlink{classpack_1_1_b_d_error_conexion}{BDErrorConexion}} e) \{}
+\DoxyCodeLine{00098             \textcolor{comment}{// TODO Auto-generated catch block}}
+\DoxyCodeLine{00099             e.printStackTrace();}
+\DoxyCodeLine{00100         \} \textcolor{keywordflow}{catch} (SQLException e) \{}
+\DoxyCodeLine{00101             \textcolor{comment}{// TODO Auto-generated catch block}}
+\DoxyCodeLine{00102             e.printStackTrace();}
+\DoxyCodeLine{00103         \}}
+\DoxyCodeLine{00104         \textcolor{keywordflow}{return} result;}
+\DoxyCodeLine{00105     \}}
+\DoxyCodeLine{\Hypertarget{_b_dbarbestial_d_a_o_8java_source_l00111}\mbox{\hyperlink{classpack_1_1_b_dbarbestial_d_a_o_a8f222e7567d413b57bb85e12ba98a9df}{00111}}     \textcolor{keyword}{public} \textcolor{keywordtype}{void} \mbox{\hyperlink{classpack_1_1_b_dbarbestial_d_a_o_a8f222e7567d413b57bb85e12ba98a9df}{resgistrar}}(String pUsu, String pContra) \{}
+\DoxyCodeLine{00112         \textcolor{keywordflow}{try} \{}
+\DoxyCodeLine{00113             ensureConnected();}
+\DoxyCodeLine{00114             Statement st = con.createStatement();}
+\DoxyCodeLine{00115             \textcolor{keywordtype}{int} rs = st.executeUpdate(\textcolor{stringliteral}{"Insert into registro values('"} + pUsu + \textcolor{stringliteral}{"','"} + pContra + \textcolor{stringliteral}{"', 0)"});}
+\DoxyCodeLine{00116 }
+\DoxyCodeLine{00117         \} \textcolor{keywordflow}{catch} (\mbox{\hyperlink{classpack_1_1_b_d_error_conexion}{BDErrorConexion}} e) \{}
+\DoxyCodeLine{00118             \textcolor{comment}{// TODO Auto-generated catch block}}
+\DoxyCodeLine{00119             e.printStackTrace();}
+\DoxyCodeLine{00120         \} \textcolor{keywordflow}{catch} (SQLException e) \{}
+\DoxyCodeLine{00121             \textcolor{comment}{// TODO Auto-generated catch block}}
+\DoxyCodeLine{00122             e.printStackTrace();}
+\DoxyCodeLine{00123         \}}
+\DoxyCodeLine{00124     \}}
+\DoxyCodeLine{\Hypertarget{_b_dbarbestial_d_a_o_8java_source_l00130}\mbox{\hyperlink{classpack_1_1_b_dbarbestial_d_a_o_ac06158290bb67f8fbc399b26f8440f0b}{00130}}     \textcolor{keyword}{public} \textcolor{keywordtype}{void} \mbox{\hyperlink{classpack_1_1_b_dbarbestial_d_a_o_ac06158290bb67f8fbc399b26f8440f0b}{registrarPuntuacion}}(String pUsu, \textcolor{keywordtype}{int} pPunt) \{}
+\DoxyCodeLine{00131         \textcolor{keywordflow}{try} \{}
+\DoxyCodeLine{00132             ensureConnected();}
+\DoxyCodeLine{00133             Statement st = con.createStatement();}
+\DoxyCodeLine{00134             \textcolor{keywordtype}{int} rs = st.executeUpdate(\textcolor{stringliteral}{"Update registro set puntuacion = '"} + pPunt + \textcolor{stringliteral}{"' where usuario = '"} + pUsu + \textcolor{stringliteral}{"'"});}
+\DoxyCodeLine{00135             System.out.println(\textcolor{stringliteral}{"Puntuaci�n actualizada correctamente"});}
+\DoxyCodeLine{00136         \} \textcolor{keywordflow}{catch} (\mbox{\hyperlink{classpack_1_1_b_d_error_conexion}{BDErrorConexion}} e) \{}
+\DoxyCodeLine{00137             \textcolor{comment}{// TODO Auto-generated catch block}}
+\DoxyCodeLine{00138             e.printStackTrace();}
+\DoxyCodeLine{00139         \} \textcolor{keywordflow}{catch} (SQLException e) \{}
+\DoxyCodeLine{00140             \textcolor{comment}{// TODO Auto-generated catch block}}
+\DoxyCodeLine{00141             e.printStackTrace();}
+\DoxyCodeLine{00142         \}}
+\DoxyCodeLine{00143     \}}
+\DoxyCodeLine{\Hypertarget{_b_dbarbestial_d_a_o_8java_source_l00150}\mbox{\hyperlink{classpack_1_1_b_dbarbestial_d_a_o_a71f43b2a052487a7d83de7fb889e7d93}{00150}}     \textcolor{keyword}{public} \textcolor{keywordtype}{boolean} \mbox{\hyperlink{classpack_1_1_b_dbarbestial_d_a_o_a71f43b2a052487a7d83de7fb889e7d93}{contrase�aCorrecta}}(String pUsu, String pContra) \{}
+\DoxyCodeLine{00151         \textcolor{keywordtype}{boolean} result = \textcolor{keyword}{false};}
+\DoxyCodeLine{00152         \textcolor{keywordflow}{try} \{}
+\DoxyCodeLine{00153             ensureConnected();}
+\DoxyCodeLine{00154             Statement st = con.createStatement();}
+\DoxyCodeLine{00155             ResultSet rs = st.executeQuery(\textcolor{stringliteral}{"SELECT * from registro where usuario = '"} + pUsu +\textcolor{stringliteral}{"'"});}
+\DoxyCodeLine{00156             \textcolor{keywordflow}{if}(pContra.equals(rs.getString(\textcolor{stringliteral}{"contrase�a
+                result = true;
+            \}
+            return result;
+
+        \} catch (BDErrorConexion e) \{
+            // TODO Auto-generated catch block
+            e.printStackTrace();
+        \} catch (SQLException e) \{
+            // TODO Auto-generated catch block
+            e.printStackTrace();
+        \}
+        return result;
+    \}
+    /**
+     * 
+     * @param pUsu, nombre de usuario a comprobar si ya estaba registrado previamente.
+     * @return True si ya existe dicho usuario, False en caso contrario.
+     */
+    public boolean existeUsuario(String pUsu) \{
+        boolean result = false;
+        try \{
+            ensureConnected();
+            Statement st = con.createStatement();
+            ResultSet rs = st.executeQuery("SELECT * from registro");
+            while(rs.next()) \{
+                if(pUsu.equals(rs.getString("usuario"))) \{
+                    result = true;
+                \}
+            \}
+            return result;
+        \} catch (BDErrorConexion e) \{
+            // TODO Auto-generated catch block
+            e.printStackTrace();
+        \} catch (SQLException e) \{
+            // TODO Auto-generated catch block
+            e.printStackTrace();
+        \}
+        return result;
+    \}
+    /**
+     * 
+     * @return la List con la informaci�n de las columnas de la base de datos
+     */
+    public List<BDInfoColumna> getMetaDatosUsuarios() \{
+        List<BDInfoColumna> result = new ArrayList<>();
+        try \{
+            ensureConnected();
+            Statement st = con.createStatement();
+            ResultSet rs = st.executeQuery("SELECT usuario,puntuacion from registro");
+            ResultSetMetaData metadata = rs.getMetaData();
+            // Processar el resultset y añadir los datos
+            int columns = metadata.getColumnCount();
+            for (int i = 1; i <= columns; i++) \{
+                BDInfoColumna infoColumna = new BDInfoColumna(metadata.getColumnName(i), metadata.getColumnTypeName(i));
+                result.add(infoColumna);
+
+            \}
+            return result;
+
+        \} catch (BDErrorConexion e) \{
+            // TODO Auto-generated catch block
+            e.printStackTrace();
+        \} catch (SQLException e) \{
+            // TODO Auto-generated catch block
+            e.printStackTrace();
+        \}
+        return result;
+    \}
+\}
+"})))\{}
+\DoxyCodeLine{00157                 result = \textcolor{keyword}{true};}
+\DoxyCodeLine{00158             \}}
+\DoxyCodeLine{00159             \textcolor{keywordflow}{return} result;}
+\DoxyCodeLine{00160 }
+\DoxyCodeLine{00161         \} \textcolor{keywordflow}{catch} (\mbox{\hyperlink{classpack_1_1_b_d_error_conexion}{BDErrorConexion}} e) \{}
+\DoxyCodeLine{00162             \textcolor{comment}{// TODO Auto-generated catch block}}
+\DoxyCodeLine{00163             e.printStackTrace();}
+\DoxyCodeLine{00164         \} \textcolor{keywordflow}{catch} (SQLException e) \{}
+\DoxyCodeLine{00165             \textcolor{comment}{// TODO Auto-generated catch block}}
+\DoxyCodeLine{00166             e.printStackTrace();}
+\DoxyCodeLine{00167         \}}
+\DoxyCodeLine{00168         \textcolor{keywordflow}{return} result;}
+\DoxyCodeLine{00169     \}}
+\DoxyCodeLine{\Hypertarget{_b_dbarbestial_d_a_o_8java_source_l00175}\mbox{\hyperlink{classpack_1_1_b_dbarbestial_d_a_o_a48b1476b661d49d11face1827141e778}{00175}}     \textcolor{keyword}{public} \textcolor{keywordtype}{boolean} \mbox{\hyperlink{classpack_1_1_b_dbarbestial_d_a_o_a48b1476b661d49d11face1827141e778}{existeUsuario}}(String pUsu) \{}
+\DoxyCodeLine{00176         \textcolor{keywordtype}{boolean} result = \textcolor{keyword}{false};}
+\DoxyCodeLine{00177         \textcolor{keywordflow}{try} \{}
+\DoxyCodeLine{00178             ensureConnected();}
+\DoxyCodeLine{00179             Statement st = con.createStatement();}
+\DoxyCodeLine{00180             ResultSet rs = st.executeQuery(\textcolor{stringliteral}{"SELECT * from registro"});}
+\DoxyCodeLine{00181             \textcolor{keywordflow}{while}(rs.next()) \{}
+\DoxyCodeLine{00182                 \textcolor{keywordflow}{if}(pUsu.equals(rs.getString(\textcolor{stringliteral}{"usuario"}))) \{}
+\DoxyCodeLine{00183                     result = \textcolor{keyword}{true};}
+\DoxyCodeLine{00184                 \}}
+\DoxyCodeLine{00185             \}}
+\DoxyCodeLine{00186             \textcolor{keywordflow}{return} result;}
+\DoxyCodeLine{00187         \} \textcolor{keywordflow}{catch} (\mbox{\hyperlink{classpack_1_1_b_d_error_conexion}{BDErrorConexion}} e) \{}
+\DoxyCodeLine{00188             \textcolor{comment}{// TODO Auto-generated catch block}}
+\DoxyCodeLine{00189             e.printStackTrace();}
+\DoxyCodeLine{00190         \} \textcolor{keywordflow}{catch} (SQLException e) \{}
+\DoxyCodeLine{00191             \textcolor{comment}{// TODO Auto-generated catch block}}
+\DoxyCodeLine{00192             e.printStackTrace();}
+\DoxyCodeLine{00193         \}}
+\DoxyCodeLine{00194         \textcolor{keywordflow}{return} result;}
+\DoxyCodeLine{00195     \}}
+\DoxyCodeLine{\Hypertarget{_b_dbarbestial_d_a_o_8java_source_l00200}\mbox{\hyperlink{classpack_1_1_b_dbarbestial_d_a_o_ac51fcb1fbc6f38e72d768e02dfadfe44}{00200}}     \textcolor{keyword}{public} List<BDInfoColumna> \mbox{\hyperlink{classpack_1_1_b_dbarbestial_d_a_o_ac51fcb1fbc6f38e72d768e02dfadfe44}{getMetaDatosUsuarios}}() \{}
+\DoxyCodeLine{00201         List<BDInfoColumna> result = \textcolor{keyword}{new} ArrayList<>();}
+\DoxyCodeLine{00202         \textcolor{keywordflow}{try} \{}
+\DoxyCodeLine{00203             ensureConnected();}
+\DoxyCodeLine{00204             Statement st = con.createStatement();}
+\DoxyCodeLine{00205             ResultSet rs = st.executeQuery(\textcolor{stringliteral}{"SELECT usuario,puntuacion from registro"});}
+\DoxyCodeLine{00206             ResultSetMetaData metadata = rs.getMetaData();}
+\DoxyCodeLine{00207             \textcolor{comment}{// Processar el resultset y añadir los datos}}
+\DoxyCodeLine{00208             \textcolor{keywordtype}{int} columns = metadata.getColumnCount();}
+\DoxyCodeLine{00209             \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 1; i <= columns; i++) \{}
+\DoxyCodeLine{00210                 \mbox{\hyperlink{classpack_1_1_b_d_info_columna}{BDInfoColumna}} infoColumna = \textcolor{keyword}{new} \mbox{\hyperlink{classpack_1_1_b_d_info_columna}{BDInfoColumna}}(metadata.getColumnName(i), metadata.getColumnTypeName(i));}
+\DoxyCodeLine{00211                 result.add(infoColumna);}
+\DoxyCodeLine{00212 }
+\DoxyCodeLine{00213             \}}
+\DoxyCodeLine{00214             \textcolor{keywordflow}{return} result;}
+\DoxyCodeLine{00215 }
+\DoxyCodeLine{00216         \} \textcolor{keywordflow}{catch} (\mbox{\hyperlink{classpack_1_1_b_d_error_conexion}{BDErrorConexion}} e) \{}
+\DoxyCodeLine{00217             \textcolor{comment}{// TODO Auto-generated catch block}}
+\DoxyCodeLine{00218             e.printStackTrace();}
+\DoxyCodeLine{00219         \} \textcolor{keywordflow}{catch} (SQLException e) \{}
+\DoxyCodeLine{00220             \textcolor{comment}{// TODO Auto-generated catch block}}
+\DoxyCodeLine{00221             e.printStackTrace();}
+\DoxyCodeLine{00222         \}}
+\DoxyCodeLine{00223         \textcolor{keywordflow}{return} result;}
+\DoxyCodeLine{00224     \}}
+\DoxyCodeLine{00225 \}}
+
+\end{DoxyCode}

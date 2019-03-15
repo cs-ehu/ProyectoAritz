@@ -1,0 +1,147 @@
+\hypertarget{classpack_1_1_cola_entrada}{}\section{Referencia de la Clase pack.\+Cola\+Entrada}
+\label{classpack_1_1_cola_entrada}\index{pack.ColaEntrada@{pack.ColaEntrada}}
+Diagrama de herencias de pack.\+Cola\+Entrada\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classpack_1_1_cola_entrada}
+\end{center}
+\end{figure}
+\subsection*{Métodos públicos}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classpack_1_1_cola_entrada_a51fc277995fc02762357eccaeae32af6}{add\+Carta}} (\mbox{\hyperlink{classpack_1_1_carta}{Carta}} p\+Carta)
+\item 
+void \mbox{\hyperlink{classpack_1_1_cola_entrada_a8ff87985e46d8a0229fbc28281f19ae1}{realizar\+Animaladas}} ()
+\item 
+void \mbox{\hyperlink{classpack_1_1_cola_entrada_a4de00a9ba4750a42b2bf66c12147729f}{realizar\+Animaladas\+Recurrentes}} ()
+\item 
+void \mbox{\hyperlink{classpack_1_1_cola_entrada_acaa7359cc846819859c101634e376ec2}{revisar\+Cola}} ()
+\item 
+\mbox{\hyperlink{classpack_1_1_carta}{Carta}} \mbox{\hyperlink{classpack_1_1_cola_entrada_a83507f1e669e27b1bd17bf6d538e5ca2}{buscar\+Carta}} (int fuerza)
+\item 
+Linked\+List$<$ \mbox{\hyperlink{classpack_1_1_carta}{Carta}} $>$ \mbox{\hyperlink{classpack_1_1_cola_entrada_a8bdb2f738d5f8373b583952b566c8a32}{get\+Lista\+Cartas}} ()
+\item 
+List\+Iterator$<$ \mbox{\hyperlink{classpack_1_1_carta}{Carta}} $>$ \mbox{\hyperlink{classpack_1_1_cola_entrada_a297f429fdfb1171851da9a273f93ec96}{get\+Iterador}} ()
+\end{DoxyCompactItemize}
+\subsection*{Métodos públicos estáticos}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{classpack_1_1_cola_entrada}{Cola\+Entrada}} \mbox{\hyperlink{classpack_1_1_cola_entrada_a66fb2b27ccd15322047bd5de159402a8}{get\+Cola\+Entrada}} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Descripción detallada}
+
+
+Definición en la línea \mbox{\hyperlink{_cola_entrada_8java_source_l00007}{7}} del archivo \mbox{\hyperlink{_cola_entrada_8java_source}{Cola\+Entrada.\+java}}.
+
+
+
+\subsection{Documentación de las funciones miembro}
+\mbox{\Hypertarget{classpack_1_1_cola_entrada_a51fc277995fc02762357eccaeae32af6}\label{classpack_1_1_cola_entrada_a51fc277995fc02762357eccaeae32af6}} 
+\index{pack.ColaEntrada@{pack.ColaEntrada}!addCarta@{addCarta}}
+\index{addCarta@{addCarta}!pack.ColaEntrada@{pack.ColaEntrada}}
+\subsubsection{\texorpdfstring{addCarta()}{addCarta()}}
+{\footnotesize\ttfamily void pack.\+Cola\+Entrada.\+add\+Carta (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classpack_1_1_carta}{Carta}}}]{p\+Carta }\end{DoxyParamCaption})}
+
+A�ade una carta al final de la Cola de entrada y efectua las Animaladas y Animaladas recurrentes correspondientes. 
+\begin{DoxyParams}{Parámetros}
+{\em p\+Carta,la} & carta que a�ade al final. \\
+\hline
+\end{DoxyParams}
+
+
+Definición en la línea \mbox{\hyperlink{_cola_entrada_8java_source_l00029}{29}} del archivo \mbox{\hyperlink{_cola_entrada_8java_source}{Cola\+Entrada.\+java}}.
+
+\mbox{\Hypertarget{classpack_1_1_cola_entrada_a83507f1e669e27b1bd17bf6d538e5ca2}\label{classpack_1_1_cola_entrada_a83507f1e669e27b1bd17bf6d538e5ca2}} 
+\index{pack.ColaEntrada@{pack.ColaEntrada}!buscarCarta@{buscarCarta}}
+\index{buscarCarta@{buscarCarta}!pack.ColaEntrada@{pack.ColaEntrada}}
+\subsubsection{\texorpdfstring{buscarCarta()}{buscarCarta()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classpack_1_1_carta}{Carta}} pack.\+Cola\+Entrada.\+buscar\+Carta (\begin{DoxyParamCaption}\item[{int}]{fuerza }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}{Parámetros}
+{\em fuerza,el} & n�mero de fuerza de la carta que estamos buscando. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+la primera carta con la fuerza especificada. 
+\end{DoxyReturn}
+
+
+Definición en la línea \mbox{\hyperlink{_cola_entrada_8java_source_l00086}{86}} del archivo \mbox{\hyperlink{_cola_entrada_8java_source}{Cola\+Entrada.\+java}}.
+
+\mbox{\Hypertarget{classpack_1_1_cola_entrada_a66fb2b27ccd15322047bd5de159402a8}\label{classpack_1_1_cola_entrada_a66fb2b27ccd15322047bd5de159402a8}} 
+\index{pack.ColaEntrada@{pack.ColaEntrada}!getColaEntrada@{getColaEntrada}}
+\index{getColaEntrada@{getColaEntrada}!pack.ColaEntrada@{pack.ColaEntrada}}
+\subsubsection{\texorpdfstring{getColaEntrada()}{getColaEntrada()}}
+{\footnotesize\ttfamily static \mbox{\hyperlink{classpack_1_1_cola_entrada}{Cola\+Entrada}} pack.\+Cola\+Entrada.\+get\+Cola\+Entrada (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+\begin{DoxyReturn}{Devuelve}
+la �nica instancia creada de la Cola de entrada, en caso de no existir la crea. 
+\end{DoxyReturn}
+
+
+Definición en la línea \mbox{\hyperlink{_cola_entrada_8java_source_l00018}{18}} del archivo \mbox{\hyperlink{_cola_entrada_8java_source}{Cola\+Entrada.\+java}}.
+
+\mbox{\Hypertarget{classpack_1_1_cola_entrada_a297f429fdfb1171851da9a273f93ec96}\label{classpack_1_1_cola_entrada_a297f429fdfb1171851da9a273f93ec96}} 
+\index{pack.ColaEntrada@{pack.ColaEntrada}!getIterador@{getIterador}}
+\index{getIterador@{getIterador}!pack.ColaEntrada@{pack.ColaEntrada}}
+\subsubsection{\texorpdfstring{getIterador()}{getIterador()}}
+{\footnotesize\ttfamily List\+Iterator$<$\mbox{\hyperlink{classpack_1_1_carta}{Carta}}$>$ pack.\+Cola\+Entrada.\+get\+Iterador (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\begin{DoxyReturn}{Devuelve}
+el List\+Iterator de la Cola de Entrada. 
+\end{DoxyReturn}
+
+
+Definición en la línea \mbox{\hyperlink{_cola_entrada_8java_source_l00108}{108}} del archivo \mbox{\hyperlink{_cola_entrada_8java_source}{Cola\+Entrada.\+java}}.
+
+\mbox{\Hypertarget{classpack_1_1_cola_entrada_a8bdb2f738d5f8373b583952b566c8a32}\label{classpack_1_1_cola_entrada_a8bdb2f738d5f8373b583952b566c8a32}} 
+\index{pack.ColaEntrada@{pack.ColaEntrada}!getListaCartas@{getListaCartas}}
+\index{getListaCartas@{getListaCartas}!pack.ColaEntrada@{pack.ColaEntrada}}
+\subsubsection{\texorpdfstring{getListaCartas()}{getListaCartas()}}
+{\footnotesize\ttfamily Linked\+List$<$\mbox{\hyperlink{classpack_1_1_carta}{Carta}}$>$ pack.\+Cola\+Entrada.\+get\+Lista\+Cartas (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\begin{DoxyReturn}{Devuelve}
+la Linked\+List de Cartas que representa la Cola de Entrada. 
+\end{DoxyReturn}
+
+
+Definición en la línea \mbox{\hyperlink{_cola_entrada_8java_source_l00102}{102}} del archivo \mbox{\hyperlink{_cola_entrada_8java_source}{Cola\+Entrada.\+java}}.
+
+\mbox{\Hypertarget{classpack_1_1_cola_entrada_a8ff87985e46d8a0229fbc28281f19ae1}\label{classpack_1_1_cola_entrada_a8ff87985e46d8a0229fbc28281f19ae1}} 
+\index{pack.ColaEntrada@{pack.ColaEntrada}!realizarAnimaladas@{realizarAnimaladas}}
+\index{realizarAnimaladas@{realizarAnimaladas}!pack.ColaEntrada@{pack.ColaEntrada}}
+\subsubsection{\texorpdfstring{realizarAnimaladas()}{realizarAnimaladas()}}
+{\footnotesize\ttfamily void pack.\+Cola\+Entrada.\+realizar\+Animaladas (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Efect�a la animalada de la �ltima carta de la Cola de Entrada. 
+
+Definición en la línea \mbox{\hyperlink{_cola_entrada_8java_source_l00044}{44}} del archivo \mbox{\hyperlink{_cola_entrada_8java_source}{Cola\+Entrada.\+java}}.
+
+\mbox{\Hypertarget{classpack_1_1_cola_entrada_a4de00a9ba4750a42b2bf66c12147729f}\label{classpack_1_1_cola_entrada_a4de00a9ba4750a42b2bf66c12147729f}} 
+\index{pack.ColaEntrada@{pack.ColaEntrada}!realizarAnimaladasRecurrentes@{realizarAnimaladasRecurrentes}}
+\index{realizarAnimaladasRecurrentes@{realizarAnimaladasRecurrentes}!pack.ColaEntrada@{pack.ColaEntrada}}
+\subsubsection{\texorpdfstring{realizarAnimaladasRecurrentes()}{realizarAnimaladasRecurrentes()}}
+{\footnotesize\ttfamily void pack.\+Cola\+Entrada.\+realizar\+Animaladas\+Recurrentes (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Efect�a todas las Animaladas recurrentes que surgen tras la \mbox{\hyperlink{interfacepack_1_1_animalada}{Animalada}} de la �ltima carta jugada. 
+
+Definición en la línea \mbox{\hyperlink{_cola_entrada_8java_source_l00050}{50}} del archivo \mbox{\hyperlink{_cola_entrada_8java_source}{Cola\+Entrada.\+java}}.
+
+\mbox{\Hypertarget{classpack_1_1_cola_entrada_acaa7359cc846819859c101634e376ec2}\label{classpack_1_1_cola_entrada_acaa7359cc846819859c101634e376ec2}} 
+\index{pack.ColaEntrada@{pack.ColaEntrada}!revisarCola@{revisarCola}}
+\index{revisarCola@{revisarCola}!pack.ColaEntrada@{pack.ColaEntrada}}
+\subsubsection{\texorpdfstring{revisarCola()}{revisarCola()}}
+{\footnotesize\ttfamily void pack.\+Cola\+Entrada.\+revisar\+Cola (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Cuando la Cola de entrada est� llena (tiene 5 cartas) las 2 primeras pasan al \mbox{\hyperlink{classpack_1_1_bar_bestial}{Bar\+Bestial}} y la �ltima pasa a Es Lo Que Hay. 
+
+Definición en la línea \mbox{\hyperlink{_cola_entrada_8java_source_l00065}{65}} del archivo \mbox{\hyperlink{_cola_entrada_8java_source}{Cola\+Entrada.\+java}}.
+
+
+
+La documentación para esta clase fue generada a partir del siguiente fichero\+:\begin{DoxyCompactItemize}
+\item 
+git/proyecto-\/jacteam-\/1/\+J\+A\+Cteam/src/main/java/pack/Cola\+Entrada.\+java\end{DoxyCompactItemize}

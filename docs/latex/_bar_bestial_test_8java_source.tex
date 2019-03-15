@@ -1,0 +1,37 @@
+\hypertarget{_bar_bestial_test_8java_source}{}\section{Bar\+Bestial\+Test.\+java}
+\label{_bar_bestial_test_8java_source}\index{git/proyecto-\/jacteam-\/1/JACteam/src/test/java/BarBestialTest.java@{git/proyecto-\/jacteam-\/1/JACteam/src/test/java/BarBestialTest.java}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001 \textcolor{keyword}{import} \textcolor{keyword}{static} org.junit.Assert.*;}
+\DoxyCodeLine{00002 }
+\DoxyCodeLine{00003 \textcolor{keyword}{import} java.util.LinkedList;}
+\DoxyCodeLine{00004 }
+\DoxyCodeLine{00005 \textcolor{keyword}{import} org.junit.Before;}
+\DoxyCodeLine{00006 \textcolor{keyword}{import} org.junit.Test;}
+\DoxyCodeLine{00007 }
+\DoxyCodeLine{00008 \textcolor{keyword}{import} pack.BarBestial;}
+\DoxyCodeLine{00009 \textcolor{keyword}{import} pack.Carta;}
+\DoxyCodeLine{00010 \textcolor{keyword}{import} pack.Color;}
+\DoxyCodeLine{00011 }
+\DoxyCodeLine{\Hypertarget{_bar_bestial_test_8java_source_l00012}\mbox{\hyperlink{class_bar_bestial_test}{00012}} \textcolor{keyword}{public} \textcolor{keyword}{class }\mbox{\hyperlink{class_bar_bestial_test}{BarBestialTest}} \{}
+\DoxyCodeLine{00013     }
+\DoxyCodeLine{00014     \textcolor{keyword}{private} LinkedList<Carta> listaCartas;}
+\DoxyCodeLine{00015     \textcolor{keyword}{private} \mbox{\hyperlink{classpack_1_1_carta}{Carta}} mono;}
+\DoxyCodeLine{00016     \textcolor{keyword}{private} \mbox{\hyperlink{classpack_1_1_carta}{Carta}} cebra;}
+\DoxyCodeLine{00017     \textcolor{keyword}{private} \mbox{\hyperlink{classpack_1_1_bar_bestial}{BarBestial}} mBar;}
+\DoxyCodeLine{00018     @Before}
+\DoxyCodeLine{00019     \textcolor{keyword}{public} \textcolor{keywordtype}{void} setUp() \textcolor{keywordflow}{throws} Exception \{}
+\DoxyCodeLine{00020         listaCartas = \textcolor{keyword}{new} LinkedList<>();}
+\DoxyCodeLine{00021         listaCartas.add(mono);}
+\DoxyCodeLine{00022         cebra = \textcolor{keyword}{new} \mbox{\hyperlink{classpack_1_1_carta}{Carta}}(\mbox{\hyperlink{enumpack_1_1_color}{Color}}.AZUL, 7);}
+\DoxyCodeLine{00023         listaCartas.add(cebra);}
+\DoxyCodeLine{00024     \}}
+\DoxyCodeLine{00025 }
+\DoxyCodeLine{00026     @Test}
+\DoxyCodeLine{00027     \textcolor{keyword}{public} \textcolor{keywordtype}{void} testUltimaCarta() \{}
+\DoxyCodeLine{00028         assertEquals(listaCartas.getLast(), cebra);}
+\DoxyCodeLine{00029     \}}
+\DoxyCodeLine{00030 }
+\DoxyCodeLine{00031 \}}
+
+\end{DoxyCode}

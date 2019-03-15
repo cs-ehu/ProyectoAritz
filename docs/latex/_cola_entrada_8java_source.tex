@@ -1,0 +1,91 @@
+\hypertarget{_cola_entrada_8java_source}{}\section{Cola\+Entrada.\+java}
+\label{_cola_entrada_8java_source}\index{git/proyecto-\/jacteam-\/1/JACteam/src/main/java/pack/ColaEntrada.java@{git/proyecto-\/jacteam-\/1/JACteam/src/main/java/pack/ColaEntrada.java}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001 \textcolor{keyword}{package }pack;}
+\DoxyCodeLine{00002 \textcolor{keyword}{import} java.util.Iterator;}
+\DoxyCodeLine{00003 \textcolor{keyword}{import} java.util.LinkedList;}
+\DoxyCodeLine{00004 \textcolor{keyword}{import} java.util.ListIterator;}
+\DoxyCodeLine{00005 \textcolor{keyword}{import} java.util.Observable;}
+\DoxyCodeLine{00006 }
+\DoxyCodeLine{\Hypertarget{_cola_entrada_8java_source_l00007}\mbox{\hyperlink{classpack_1_1_cola_entrada}{00007}} \textcolor{keyword}{public} \textcolor{keyword}{class }\mbox{\hyperlink{classpack_1_1_cola_entrada}{ColaEntrada}} \textcolor{keyword}{extends} Observable\{}
+\DoxyCodeLine{00008 }
+\DoxyCodeLine{00009     \textcolor{keyword}{private} \textcolor{keyword}{static} \mbox{\hyperlink{classpack_1_1_cola_entrada}{ColaEntrada}} mCola;}
+\DoxyCodeLine{00010     \textcolor{keyword}{private} LinkedList<Carta> listaCartas;}
+\DoxyCodeLine{00011 }
+\DoxyCodeLine{00012     \textcolor{keyword}{private} \mbox{\hyperlink{classpack_1_1_cola_entrada}{ColaEntrada}}() \{}
+\DoxyCodeLine{00013         listaCartas = \textcolor{keyword}{new} LinkedList<Carta>();}
+\DoxyCodeLine{00014     \}}
+\DoxyCodeLine{\Hypertarget{_cola_entrada_8java_source_l00018}\mbox{\hyperlink{classpack_1_1_cola_entrada_a66fb2b27ccd15322047bd5de159402a8}{00018}}     \textcolor{keyword}{public} \textcolor{keyword}{static} \mbox{\hyperlink{classpack_1_1_cola_entrada}{ColaEntrada}} \mbox{\hyperlink{classpack_1_1_cola_entrada_a66fb2b27ccd15322047bd5de159402a8}{getColaEntrada}}() \{}
+\DoxyCodeLine{00019         \textcolor{keywordflow}{if}(mCola==\textcolor{keyword}{null}) \{}
+\DoxyCodeLine{00020             mCola= \textcolor{keyword}{new} \mbox{\hyperlink{classpack_1_1_cola_entrada}{ColaEntrada}}();}
+\DoxyCodeLine{00021         \}}
+\DoxyCodeLine{00022         \textcolor{keywordflow}{return} mCola;}
+\DoxyCodeLine{00023     \}}
+\DoxyCodeLine{00024 }
+\DoxyCodeLine{\Hypertarget{_cola_entrada_8java_source_l00029}\mbox{\hyperlink{classpack_1_1_cola_entrada_a51fc277995fc02762357eccaeae32af6}{00029}}     \textcolor{keyword}{public} \textcolor{keywordtype}{void} \mbox{\hyperlink{classpack_1_1_cola_entrada_a51fc277995fc02762357eccaeae32af6}{addCarta}}(\mbox{\hyperlink{classpack_1_1_carta}{Carta}} pCarta) \{}
+\DoxyCodeLine{00030         listaCartas.add(pCarta);}
+\DoxyCodeLine{00031         setChanged();}
+\DoxyCodeLine{00032         notifyObservers(\textcolor{stringliteral}{"ColaEntrada"});}
+\DoxyCodeLine{00033         \mbox{\hyperlink{classpack_1_1_cola_entrada_a8ff87985e46d8a0229fbc28281f19ae1}{realizarAnimaladas}}();}
+\DoxyCodeLine{00034         setChanged();}
+\DoxyCodeLine{00035         notifyObservers(\textcolor{stringliteral}{"ColaEntrada"});}
+\DoxyCodeLine{00036         \mbox{\hyperlink{classpack_1_1_cola_entrada_a4de00a9ba4750a42b2bf66c12147729f}{realizarAnimaladasRecurrentes}}();}
+\DoxyCodeLine{00037         notifyObservers(\textcolor{stringliteral}{"ColaEntrada"});}
+\DoxyCodeLine{00038         listaCartas.stream().forEach(\mbox{\hyperlink{classpack_1_1_carta_ab4597db914f217e5c8f056a5e414ed9c}{Carta::noUltimaJugada}});}
+\DoxyCodeLine{00039         \mbox{\hyperlink{classpack_1_1_cola_entrada_acaa7359cc846819859c101634e376ec2}{revisarCola}}();}
+\DoxyCodeLine{00040     \}}
+\DoxyCodeLine{\Hypertarget{_cola_entrada_8java_source_l00044}\mbox{\hyperlink{classpack_1_1_cola_entrada_a8ff87985e46d8a0229fbc28281f19ae1}{00044}}     \textcolor{keyword}{public} \textcolor{keywordtype}{void} \mbox{\hyperlink{classpack_1_1_cola_entrada_a8ff87985e46d8a0229fbc28281f19ae1}{realizarAnimaladas}}() \{}
+\DoxyCodeLine{00045         listaCartas.getLast().realizarAnimalada();}
+\DoxyCodeLine{00046     \}}
+\DoxyCodeLine{\Hypertarget{_cola_entrada_8java_source_l00050}\mbox{\hyperlink{classpack_1_1_cola_entrada_a4de00a9ba4750a42b2bf66c12147729f}{00050}}     \textcolor{keyword}{public} \textcolor{keywordtype}{void} \mbox{\hyperlink{classpack_1_1_cola_entrada_a4de00a9ba4750a42b2bf66c12147729f}{realizarAnimaladasRecurrentes}}() \{}
+\DoxyCodeLine{00051         \textcolor{comment}{// TODO - implement ColaEntrada.realizarAnimaladasRecurrentes}}
+\DoxyCodeLine{00052         \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = listaCartas.size()-1; i >= 0; i--) \{}
+\DoxyCodeLine{00053             \mbox{\hyperlink{classpack_1_1_carta}{Carta}} esta = listaCartas.get(i);}
+\DoxyCodeLine{00054             \textcolor{keywordflow}{if}(!esta.\mbox{\hyperlink{classpack_1_1_carta_a0ff7c29c7a368e1af1515abb8a72bf52}{getUltimaJugada}}()) \{}
+\DoxyCodeLine{00055                 \textcolor{keywordflow}{if}(esta.\mbox{\hyperlink{classpack_1_1_carta_ac772a727e2e2abc726ff5001b5e02787}{getNum}}() == 11 || esta.\mbox{\hyperlink{classpack_1_1_carta_ac772a727e2e2abc726ff5001b5e02787}{getNum}}() == 10 || esta.\mbox{\hyperlink{classpack_1_1_carta_ac772a727e2e2abc726ff5001b5e02787}{getNum}}() == 8) \{}
+\DoxyCodeLine{00056                     esta.\mbox{\hyperlink{classpack_1_1_carta_a531e7a4e1d9ab112a58bb94e5fd98ea4}{realizarAnimalada}}();}
+\DoxyCodeLine{00057                 \}}
+\DoxyCodeLine{00058             \}}
+\DoxyCodeLine{00059             }
+\DoxyCodeLine{00060         \}}
+\DoxyCodeLine{00061     \}}
+\DoxyCodeLine{\Hypertarget{_cola_entrada_8java_source_l00065}\mbox{\hyperlink{classpack_1_1_cola_entrada_acaa7359cc846819859c101634e376ec2}{00065}}     \textcolor{keyword}{public} \textcolor{keywordtype}{void} \mbox{\hyperlink{classpack_1_1_cola_entrada_acaa7359cc846819859c101634e376ec2}{revisarCola}}() \{}
+\DoxyCodeLine{00066         \textcolor{comment}{// TODO - implement ColaEntrada.revisarCola}}
+\DoxyCodeLine{00067         \textcolor{keywordflow}{if}(listaCartas.size() == 5) \{}
+\DoxyCodeLine{00068             \mbox{\hyperlink{classpack_1_1_bar_bestial}{BarBestial}}.\mbox{\hyperlink{classpack_1_1_bar_bestial_a04988647a104add929df354b19d56458}{getBarBestial}}().\mbox{\hyperlink{classpack_1_1_bar_bestial_abdeaa09d95acd91fe14e643fb8d6081f}{addCarta}}(listaCartas.getFirst());}
+\DoxyCodeLine{00069             listaCartas.removeFirst();}
+\DoxyCodeLine{00070             setChanged();}
+\DoxyCodeLine{00071             notifyObservers(\textcolor{stringliteral}{"ColaEntrada"});}
+\DoxyCodeLine{00072             \mbox{\hyperlink{classpack_1_1_bar_bestial}{BarBestial}}.\mbox{\hyperlink{classpack_1_1_bar_bestial_a04988647a104add929df354b19d56458}{getBarBestial}}().\mbox{\hyperlink{classpack_1_1_bar_bestial_abdeaa09d95acd91fe14e643fb8d6081f}{addCarta}}(listaCartas.getFirst());}
+\DoxyCodeLine{00073             listaCartas.removeFirst();}
+\DoxyCodeLine{00074             setChanged();}
+\DoxyCodeLine{00075             notifyObservers(\textcolor{stringliteral}{"ColaEntrada"});}
+\DoxyCodeLine{00076             \mbox{\hyperlink{classpack_1_1_es_lo_que_hay}{EsLoQueHay}}.\mbox{\hyperlink{classpack_1_1_es_lo_que_hay_a20aa518e9d66cc019b0cc87b7e93790a}{getEsLoQueHay}}().\mbox{\hyperlink{classpack_1_1_es_lo_que_hay_acb67e9480ca01434ffcf7940f76d5fe0}{addCarta}}(listaCartas.getLast());}
+\DoxyCodeLine{00077             listaCartas.removeLast();}
+\DoxyCodeLine{00078             setChanged();}
+\DoxyCodeLine{00079             notifyObservers(\textcolor{stringliteral}{"ColaEntrada"});}
+\DoxyCodeLine{00080         \}}
+\DoxyCodeLine{00081     \}}
+\DoxyCodeLine{\Hypertarget{_cola_entrada_8java_source_l00086}\mbox{\hyperlink{classpack_1_1_cola_entrada_a83507f1e669e27b1bd17bf6d538e5ca2}{00086}}     \textcolor{keyword}{public} \mbox{\hyperlink{classpack_1_1_carta}{Carta}} \mbox{\hyperlink{classpack_1_1_cola_entrada_a83507f1e669e27b1bd17bf6d538e5ca2}{buscarCarta}}(\textcolor{keywordtype}{int} fuerza)\{}
+\DoxyCodeLine{00087         \textcolor{keywordtype}{boolean} encontrado = \textcolor{keyword}{false};}
+\DoxyCodeLine{00088         \mbox{\hyperlink{classpack_1_1_carta}{Carta}} buscada = \textcolor{keyword}{null};}
+\DoxyCodeLine{00089         Iterator<Carta> itr = listaCartas.iterator();}
+\DoxyCodeLine{00090         \textcolor{keywordflow}{while}(encontrado == \textcolor{keyword}{false} \&\& itr.hasNext())\{}
+\DoxyCodeLine{00091             \mbox{\hyperlink{classpack_1_1_carta}{Carta}} siguiente = itr.next();}
+\DoxyCodeLine{00092             \textcolor{keywordflow}{if}(siguiente.\mbox{\hyperlink{classpack_1_1_carta_ac772a727e2e2abc726ff5001b5e02787}{getNum}}() == fuerza)\{}
+\DoxyCodeLine{00093                 buscada = siguiente;}
+\DoxyCodeLine{00094                 encontrado = \textcolor{keyword}{true};}
+\DoxyCodeLine{00095             \}}
+\DoxyCodeLine{00096         \}}
+\DoxyCodeLine{00097         \textcolor{keywordflow}{return} buscada;}
+\DoxyCodeLine{00098     \}}
+\DoxyCodeLine{\Hypertarget{_cola_entrada_8java_source_l00102}\mbox{\hyperlink{classpack_1_1_cola_entrada_a8bdb2f738d5f8373b583952b566c8a32}{00102}}     \textcolor{keyword}{public} LinkedList<Carta> \mbox{\hyperlink{classpack_1_1_cola_entrada_a8bdb2f738d5f8373b583952b566c8a32}{getListaCartas}}()\{}
+\DoxyCodeLine{00103         \textcolor{keywordflow}{return} listaCartas;}
+\DoxyCodeLine{00104     \}}
+\DoxyCodeLine{\Hypertarget{_cola_entrada_8java_source_l00108}\mbox{\hyperlink{classpack_1_1_cola_entrada_a297f429fdfb1171851da9a273f93ec96}{00108}}     \textcolor{keyword}{public} ListIterator<Carta> \mbox{\hyperlink{classpack_1_1_cola_entrada_a297f429fdfb1171851da9a273f93ec96}{getIterador}}()\{}
+\DoxyCodeLine{00109         \textcolor{keywordflow}{return} listaCartas.listIterator();}
+\DoxyCodeLine{00110     \}}
+\DoxyCodeLine{00111 \}}
+
+\end{DoxyCode}

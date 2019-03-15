@@ -1,0 +1,36 @@
+\hypertarget{_hipopotamo11_8java_source}{}\section{Hipopotamo11.\+java}
+\label{_hipopotamo11_8java_source}\index{git/proyecto-\/jacteam-\/1/JACteam/src/main/java/pack/Hipopotamo11.java@{git/proyecto-\/jacteam-\/1/JACteam/src/main/java/pack/Hipopotamo11.java}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001 \textcolor{keyword}{package }pack;}
+\DoxyCodeLine{00002 }
+\DoxyCodeLine{00003 \textcolor{keyword}{import} java.util.LinkedList;}
+\DoxyCodeLine{00004 \textcolor{keyword}{import} java.util.ListIterator;}
+\DoxyCodeLine{00005 }
+\DoxyCodeLine{\Hypertarget{_hipopotamo11_8java_source_l00006}\mbox{\hyperlink{classpack_1_1_hipopotamo11}{00006}} \textcolor{keyword}{public} \textcolor{keyword}{class }\mbox{\hyperlink{classpack_1_1_hipopotamo11}{Hipopotamo11}} \textcolor{keyword}{implements} \mbox{\hyperlink{interfacepack_1_1_animalada}{Animalada}} \{}
+\DoxyCodeLine{00007     \textcolor{keyword}{private} \mbox{\hyperlink{classpack_1_1_carta}{Carta}} mCarta;}
+\DoxyCodeLine{00008     \textcolor{keyword}{public} \mbox{\hyperlink{classpack_1_1_hipopotamo11}{Hipopotamo11}}(\mbox{\hyperlink{classpack_1_1_carta}{Carta}} pCarta) \{}
+\DoxyCodeLine{00009         mCarta=pCarta;}
+\DoxyCodeLine{00010     \}}
+\DoxyCodeLine{00015     @Override}
+\DoxyCodeLine{\Hypertarget{_hipopotamo11_8java_source_l00016}\mbox{\hyperlink{classpack_1_1_hipopotamo11_a0e022442d410e96055ba6bcd32897594}{00016}}     \textcolor{keyword}{public} \textcolor{keywordtype}{void} \mbox{\hyperlink{classpack_1_1_hipopotamo11_a0e022442d410e96055ba6bcd32897594}{realizarAnimalada}}() \{}
+\DoxyCodeLine{00017         \textcolor{comment}{// TODO Auto-generated method stub}}
+\DoxyCodeLine{00018         LinkedList<Carta> lista=\mbox{\hyperlink{classpack_1_1_cola_entrada}{ColaEntrada}}.\mbox{\hyperlink{classpack_1_1_cola_entrada_a66fb2b27ccd15322047bd5de159402a8}{getColaEntrada}}().\mbox{\hyperlink{classpack_1_1_cola_entrada_a8bdb2f738d5f8373b583952b566c8a32}{getListaCartas}}();}
+\DoxyCodeLine{00019         ListIterator<Carta> it= lista.listIterator(lista.indexOf(mCarta));}
+\DoxyCodeLine{00020         \textcolor{keywordtype}{boolean} encontrado= \textcolor{keyword}{false};}
+\DoxyCodeLine{00021         \textcolor{keywordflow}{while}(it.hasPrevious() \&\& !encontrado)\{}
+\DoxyCodeLine{00022             \mbox{\hyperlink{classpack_1_1_carta}{Carta}} carta= it.previous();}
+\DoxyCodeLine{00023             \textcolor{keywordflow}{if}(carta.\mbox{\hyperlink{classpack_1_1_carta_ac772a727e2e2abc726ff5001b5e02787}{getNum}}()==7 || carta.\mbox{\hyperlink{classpack_1_1_carta_ac772a727e2e2abc726ff5001b5e02787}{getNum}}()==11 || carta.\mbox{\hyperlink{classpack_1_1_carta_ac772a727e2e2abc726ff5001b5e02787}{getNum}}()==12)\{}
+\DoxyCodeLine{00024                 \mbox{\hyperlink{classpack_1_1_cola_entrada}{ColaEntrada}}.\mbox{\hyperlink{classpack_1_1_cola_entrada_a66fb2b27ccd15322047bd5de159402a8}{getColaEntrada}}().\mbox{\hyperlink{classpack_1_1_cola_entrada_a8bdb2f738d5f8373b583952b566c8a32}{getListaCartas}}().remove(mCarta);}
+\DoxyCodeLine{00025                 \mbox{\hyperlink{classpack_1_1_cola_entrada}{ColaEntrada}}.\mbox{\hyperlink{classpack_1_1_cola_entrada_a66fb2b27ccd15322047bd5de159402a8}{getColaEntrada}}().\mbox{\hyperlink{classpack_1_1_cola_entrada_a8bdb2f738d5f8373b583952b566c8a32}{getListaCartas}}().add(\mbox{\hyperlink{classpack_1_1_cola_entrada}{ColaEntrada}}.\mbox{\hyperlink{classpack_1_1_cola_entrada_a66fb2b27ccd15322047bd5de159402a8}{getColaEntrada}}().\mbox{\hyperlink{classpack_1_1_cola_entrada_a8bdb2f738d5f8373b583952b566c8a32}{getListaCartas}}().indexOf(carta)+1, mCarta);}
+\DoxyCodeLine{00026                 encontrado=\textcolor{keyword}{true};}
+\DoxyCodeLine{00027             \}}
+\DoxyCodeLine{00028         \}}
+\DoxyCodeLine{00029         \textcolor{keywordflow}{if}(!encontrado) \{}
+\DoxyCodeLine{00030             \mbox{\hyperlink{classpack_1_1_cola_entrada}{ColaEntrada}}.\mbox{\hyperlink{classpack_1_1_cola_entrada_a66fb2b27ccd15322047bd5de159402a8}{getColaEntrada}}().\mbox{\hyperlink{classpack_1_1_cola_entrada_a8bdb2f738d5f8373b583952b566c8a32}{getListaCartas}}().remove(mCarta);}
+\DoxyCodeLine{00031             \mbox{\hyperlink{classpack_1_1_cola_entrada}{ColaEntrada}}.\mbox{\hyperlink{classpack_1_1_cola_entrada_a66fb2b27ccd15322047bd5de159402a8}{getColaEntrada}}().\mbox{\hyperlink{classpack_1_1_cola_entrada_a8bdb2f738d5f8373b583952b566c8a32}{getListaCartas}}().addFirst(mCarta);}
+\DoxyCodeLine{00032         \}}
+\DoxyCodeLine{00033     \}}
+\DoxyCodeLine{00034 \}}
+
+\end{DoxyCode}

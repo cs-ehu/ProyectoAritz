@@ -1,0 +1,56 @@
+\hypertarget{_mono4_8java_source}{}\section{Mono4.\+java}
+\label{_mono4_8java_source}\index{git/proyecto-\/jacteam-\/1/JACteam/src/main/java/pack/Mono4.java@{git/proyecto-\/jacteam-\/1/JACteam/src/main/java/pack/Mono4.java}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001 \textcolor{keyword}{package }pack;}
+\DoxyCodeLine{00002 }
+\DoxyCodeLine{00003 \textcolor{keyword}{import} java.util.LinkedList;}
+\DoxyCodeLine{00004 \textcolor{keyword}{import} java.util.ListIterator;}
+\DoxyCodeLine{00005 }
+\DoxyCodeLine{\Hypertarget{_mono4_8java_source_l00006}\mbox{\hyperlink{classpack_1_1_mono4}{00006}} \textcolor{keyword}{public} \textcolor{keyword}{class }\mbox{\hyperlink{classpack_1_1_mono4}{Mono4}} \textcolor{keyword}{implements} \mbox{\hyperlink{interfacepack_1_1_animalada}{Animalada}}\{}
+\DoxyCodeLine{00007     \textcolor{keyword}{public} \mbox{\hyperlink{classpack_1_1_mono4}{Mono4}}() \{}
+\DoxyCodeLine{00008         }
+\DoxyCodeLine{00009     \}}
+\DoxyCodeLine{00019     @Override}
+\DoxyCodeLine{\Hypertarget{_mono4_8java_source_l00020}\mbox{\hyperlink{classpack_1_1_mono4_a866ee4c7fbb9e67c3945fea72688cfb2}{00020}}     \textcolor{keyword}{public} \textcolor{keywordtype}{void} \mbox{\hyperlink{classpack_1_1_mono4_a866ee4c7fbb9e67c3945fea72688cfb2}{realizarAnimalada}}() \{}
+\DoxyCodeLine{00021         LinkedList<Carta> listaMonos = \textcolor{keyword}{new} LinkedList<Carta>();}
+\DoxyCodeLine{00022         ListIterator<Carta> itr= \mbox{\hyperlink{classpack_1_1_cola_entrada}{ColaEntrada}}.\mbox{\hyperlink{classpack_1_1_cola_entrada_a66fb2b27ccd15322047bd5de159402a8}{getColaEntrada}}().\mbox{\hyperlink{classpack_1_1_cola_entrada_a297f429fdfb1171851da9a273f93ec96}{getIterador}}();}
+\DoxyCodeLine{00023         \textcolor{keywordflow}{while}(itr.hasNext()) \{}
+\DoxyCodeLine{00024             \mbox{\hyperlink{classpack_1_1_carta}{Carta}} carta=itr.next();}
+\DoxyCodeLine{00025             \textcolor{keywordflow}{if}(carta.\mbox{\hyperlink{classpack_1_1_carta_ac772a727e2e2abc726ff5001b5e02787}{getNum}}()==4) \{}
+\DoxyCodeLine{00026                 listaMonos.add(carta);}
+\DoxyCodeLine{00027             \}}
+\DoxyCodeLine{00028         \}}
+\DoxyCodeLine{00029         \mbox{\hyperlink{classpack_1_1_carta}{Carta}} ultima=\mbox{\hyperlink{classpack_1_1_cola_entrada}{ColaEntrada}}.\mbox{\hyperlink{classpack_1_1_cola_entrada_a66fb2b27ccd15322047bd5de159402a8}{getColaEntrada}}().\mbox{\hyperlink{classpack_1_1_cola_entrada_a8bdb2f738d5f8373b583952b566c8a32}{getListaCartas}}().getLast();}
+\DoxyCodeLine{00030         ListIterator<Carta> itr1=listaMonos.listIterator();}
+\DoxyCodeLine{00031         \textcolor{keywordtype}{boolean} encontrado= \textcolor{keyword}{false};}
+\DoxyCodeLine{00032         \textcolor{keywordflow}{while}(itr1.hasNext() \&\& !encontrado) \{}
+\DoxyCodeLine{00033             \textcolor{keywordflow}{if}(itr1.next().equals(ultima)) \{}
+\DoxyCodeLine{00034                 encontrado=\textcolor{keyword}{true};}
+\DoxyCodeLine{00035             \}}
+\DoxyCodeLine{00036         \}}
+\DoxyCodeLine{00037         \textcolor{keywordflow}{if}(!encontrado) \{}
+\DoxyCodeLine{00038             listaMonos.add(ultima);}
+\DoxyCodeLine{00039         \}}
+\DoxyCodeLine{00040         itr1=listaMonos.listIterator();}
+\DoxyCodeLine{00041         \textcolor{keywordflow}{if}(listaMonos.size()>=2) \{}
+\DoxyCodeLine{00042             itr= \mbox{\hyperlink{classpack_1_1_cola_entrada}{ColaEntrada}}.\mbox{\hyperlink{classpack_1_1_cola_entrada_a66fb2b27ccd15322047bd5de159402a8}{getColaEntrada}}().\mbox{\hyperlink{classpack_1_1_cola_entrada_a297f429fdfb1171851da9a273f93ec96}{getIterador}}();}
+\DoxyCodeLine{00043             \textcolor{keywordflow}{while}(itr.hasNext()) \{}
+\DoxyCodeLine{00044                 \mbox{\hyperlink{classpack_1_1_carta}{Carta}} carta=itr.next();}
+\DoxyCodeLine{00045                 \textcolor{keywordflow}{if}(carta.\mbox{\hyperlink{classpack_1_1_carta_ac772a727e2e2abc726ff5001b5e02787}{getNum}}()==10||carta.\mbox{\hyperlink{classpack_1_1_carta_ac772a727e2e2abc726ff5001b5e02787}{getNum}}()==11) \{}
+\DoxyCodeLine{00046                     itr.remove();}
+\DoxyCodeLine{00047                 \}}
+\DoxyCodeLine{00048             \}}
+\DoxyCodeLine{00049             \textcolor{keywordflow}{while}(itr1.hasNext()) \{}
+\DoxyCodeLine{00050                 \mbox{\hyperlink{classpack_1_1_cola_entrada}{ColaEntrada}}.\mbox{\hyperlink{classpack_1_1_cola_entrada_a66fb2b27ccd15322047bd5de159402a8}{getColaEntrada}}().\mbox{\hyperlink{classpack_1_1_cola_entrada_a8bdb2f738d5f8373b583952b566c8a32}{getListaCartas}}().remove(itr1.next());}
+\DoxyCodeLine{00051             \}}
+\DoxyCodeLine{00052             itr1=listaMonos.listIterator();}
+\DoxyCodeLine{00053             \textcolor{keywordflow}{while}(itr1.hasNext()) \{}
+\DoxyCodeLine{00054                 \mbox{\hyperlink{classpack_1_1_cola_entrada}{ColaEntrada}}.\mbox{\hyperlink{classpack_1_1_cola_entrada_a66fb2b27ccd15322047bd5de159402a8}{getColaEntrada}}().\mbox{\hyperlink{classpack_1_1_cola_entrada_a8bdb2f738d5f8373b583952b566c8a32}{getListaCartas}}().addFirst(itr1.next());}
+\DoxyCodeLine{00055             \}}
+\DoxyCodeLine{00056         \}}
+\DoxyCodeLine{00057     \}}
+\DoxyCodeLine{00058     }
+\DoxyCodeLine{00059 \}}
+
+\end{DoxyCode}
